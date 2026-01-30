@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highguard Beginner's Guide: How to Play & Win Your First Raids (2026)</title>
+    <title>Highguard Beginner's Guide: How to Play, Wardens & Raid Tips (2026)</title>
     <meta name="description"
-        content="Complete Highguard beginner's guide. Learn core mechanics, Warden abilities, raid strategies, and tips to dominate in this free-to-play PvP raid shooter.">
+        content="Complete Highguard beginner's guide for 2026. Learn all 8 Wardens, raid mechanics, Shieldbreaker strategy, and essential tips to dominate this F2P PvP raid shooter.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://highguard.wiki/guides/beginners/">
     <link rel="icon" type="image/svg+xml"
@@ -16,9 +16,14 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Highguard Beginner's Guide: How to Play & Win (2026)">
     <meta property="og:description"
-        content="Master Highguard with our complete beginner's guide. Core mechanics, Warden tips, raid strategies.">
+        content="Master Highguard with our complete beginner's guide. All 8 Wardens, raid mechanics, and strategies explained.">
     <meta property="og:url" content="https://highguard.wiki/guides/beginners/">
     <meta property="og:site_name" content="Highguard Wiki">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highguard Beginner's Guide 2026">
+    <meta name="twitter:description" content="Complete guide to Highguard: Wardens, raids, and winning strategies.">
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,12 +34,32 @@
                     colors: {
                         arcane: { 50: '#f0f4ff', 100: '#e0e7ff', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#1e1b4b' },
                         dark: { 800: '#1e1e2e', 900: '#0f0f1a', 950: '#080810' }
+                    },
+                    fontFamily: {
+                        display: ['Rajdhani', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
         .glow-sm {
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
         }
@@ -51,21 +76,48 @@
         .prose h2 {
             scroll-margin-top: 80px;
         }
+
+        .warden-card {
+            transition: all 0.3s ease;
+        }
+
+        .warden-card:hover {
+            transform: scale(1.02);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+
+        .phase-indicator {
+            position: relative;
+        }
+
+        .phase-indicator::before {
+            content: '';
+            position: absolute;
+            left: 1.5rem;
+            top: 3rem;
+            bottom: -1rem;
+            width: 2px;
+            background: linear-gradient(to bottom, #6366f1, transparent);
+        }
+
+        .phase-indicator:last-child::before {
+            display: none;
+        }
     </style>
 
     <!-- JSON-LD: Article + HowTo + FAQPage -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"Highguard Beginner's Guide: How to Play & Win Your First Raids","description":"Complete beginner's guide for Highguard covering core mechanics, Warden abilities, and raid strategies.","author":{"@type":"Organization","name":"Highguard Wiki"},"publisher":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-01-30","dateModified":"2026-01-30"}
+    {"@context":"https://schema.org","@type":"Article","headline":"Highguard Beginner's Guide: How to Play & Win Your First Raids","description":"Complete beginner's guide for Highguard covering all 8 Wardens, core mechanics, and raid strategies.","author":{"@type":"Organization","name":"Highguard Wiki"},"publisher":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-01-30","dateModified":"2026-01-30"}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"HowTo","name":"How to Play Highguard","description":"Step-by-step guide to playing your first Highguard match","step":[{"@type":"HowToStep","name":"Choose Your Warden","text":"Select a Warden from the available roster. Each has unique arcane abilities."},{"@type":"HowToStep","name":"Secure Your Stronghold","text":"Choose and call in your team's base. Reinforce walls and customize loadouts."},{"@type":"HowToStep","name":"Mount Up and Explore","text":"Ride across the map to gather loot, weapons, and gear."},{"@type":"HowToStep","name":"Fight for the Shieldbreaker","text":"When storms appear, battle the enemy team for the magical sword."},{"@type":"HowToStep","name":"Raid the Enemy Base","text":"Use the Shieldbreaker to summon a Siege Tower and destroy enemy generators."}]}
+    {"@context":"https://schema.org","@type":"HowTo","name":"How to Play Highguard","description":"Step-by-step guide to playing your first Highguard match","step":[{"@type":"HowToStep","name":"Choose Your Warden","text":"Select from 8 Wardens across 5 classes: Assault, Defensive, Destruction, Recon, or Support."},{"@type":"HowToStep","name":"Secure Your Stronghold","text":"Choose your team's base, reinforce walls, and customize your loadout."},{"@type":"HowToStep","name":"Loot and Gear Up","text":"Mount up and explore the map to gather weapons, armor, and Vesper currency."},{"@type":"HowToStep","name":"Fight for the Shieldbreaker","text":"When magical storms appear, battle the enemy team for the legendary sword."},{"@type":"HowToStep","name":"Raid the Enemy Base","text":"Carry the Shieldbreaker to summon a Siege Tower and destroy enemy generators or Anchor Stone."}]}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Highguard?","acceptedAnswer":{"@type":"Answer","text":"Highguard is a free-to-play PvP raid shooter by Wildlight Entertainment where 3-player teams fight as Wardens—arcane gunslingers battling for control of a mythical continent."}},{"@type":"Question","name":"Is Highguard free?","acceptedAnswer":{"@type":"Answer","text":"Yes, Highguard is completely free to play on Steam with all core content available at no cost."}},{"@type":"Question","name":"How many players per team?","acceptedAnswer":{"@type":"Answer","text":"Teams consist of 3 players, making it a 3v3 PvP experience."}},{"@type":"Question","name":"What are Wardens?","acceptedAnswer":{"@type":"Answer","text":"Wardens are the playable characters—arcane gunslingers with unique magical abilities for raiding, defense, and combat."}}]}
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Highguard?","acceptedAnswer":{"@type":"Answer","text":"Highguard is a free-to-play PvP raid shooter by Wildlight Entertainment where 3-player teams fight as Wardens—arcane gunslingers battling for control of a mythical continent. Available on PC, PS5, and Xbox Series X/S."}},{"@type":"Question","name":"Is Highguard free?","acceptedAnswer":{"@type":"Answer","text":"Yes, Highguard is completely free to play with all core content available at no cost. Monthly Episode updates add new Wardens, weapons, and maps for free."}},{"@type":"Question","name":"How many Wardens are in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Highguard launched with 8 playable Wardens: Redmane, Condor, Atticus, Kai, Slade, Scarlet, Una, and Mara. New Wardens are added in Episode updates."}},{"@type":"Question","name":"What platforms is Highguard on?","acceptedAnswer":{"@type":"Answer","text":"Highguard is available on PC (Steam), PlayStation 5, and Xbox Series X/S with full cross-play and cross-progression support."}}]}
     </script>
 </head>
 
-<body class="bg-dark-950 text-gray-100 font-sans antialiased">
+<body class="bg-dark-950 text-gray-100 antialiased">
 
     <!-- ========== HEADER ========== -->
     <header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-arcane-900/50">
@@ -75,7 +127,7 @@
                     <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5L18 8v8l-6 3.75L6 16V8l6-3.5z" />
                     <path d="M12 6v12M8 8l4 2.5L16 8" />
                 </svg>
-                <span>Highguard<span class="text-arcane-400">.wiki</span></span>
+                <span class="font-display">Highguard<span class="text-arcane-400">.wiki</span></span>
             </a>
             <div class="hidden md:flex items-center gap-5 text-sm">
                 <a href="/guides/" class="text-arcane-400">Guides</a>
@@ -105,32 +157,43 @@
             <div class="flex items-center gap-2 text-sm text-gray-400 mb-3">
                 <span class="bg-green-500/20 text-green-400 px-2 py-0.5 rounded text-xs font-medium">BEGINNER</span>
                 <span>•</span>
-                <span>10 min read</span>
+                <span>12 min read</span>
                 <span>•</span>
                 <span>Updated Jan 30, 2026</span>
             </div>
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
                 Highguard Beginner's Guide: How to Play & Win Your First Raids
             </h1>
             <p class="text-lg text-gray-300 mb-6">
-                New to Highguard? This complete guide covers everything you need to know—from core mechanics and Warden
-                abilities to raid strategies and common mistakes to avoid.
+                New to Highguard? This complete guide covers everything you need to know—from all 8 launch Wardens and
+                their abilities to raid mechanics and strategies for dominating the battlefield.
             </p>
 
             <!-- Quick Facts Box -->
             <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mb-6">
-                <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Quick Facts</h2>
+                <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3 font-display">Quick Facts
+                </h2>
                 <div class="grid sm:grid-cols-2 gap-3 text-sm">
                     <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span>
-                        <strong>Developer:</strong> Wildlight Entertainment</div>
+                        <strong>Developer:</strong> Wildlight Entertainment
+                    </div>
                     <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span>
-                        <strong>Release:</strong> January 26, 2026</div>
+                        <strong>Release:</strong> January 26, 2026
+                    </div>
                     <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span> <strong>Price:</strong>
                         Free-to-Play</div>
                     <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span>
-                        <strong>Platform:</strong> PC (Steam)</div>
+                        <strong>Platforms:</strong> PC, PS5, Xbox Series X/S
+                    </div>
                     <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span> <strong>Team
                             Size:</strong> 3v3</div>
+                    <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span> <strong>Launch
+                            Wardens:</strong>
+                        8 Characters</div>
+                    <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span>
+                        <strong>Cross-Play:</strong>
+                        Fully Supported
+                    </div>
                     <div class="flex items-center gap-2"><span class="text-arcane-400">▸</span> <strong>Genre:</strong>
                         PvP Raid Shooter</div>
                 </div>
@@ -139,137 +202,351 @@
 
         <!-- Table of Contents -->
         <nav class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mb-10">
-            <h2 class="text-lg font-semibold mb-4">📑 Table of Contents</h2>
+            <h2 class="text-lg font-semibold mb-4 font-display">📑 Table of Contents</h2>
             <ol class="space-y-2 text-sm">
                 <li><a href="#what-is-highguard" class="text-arcane-400 hover:text-arcane-300">1. What is Highguard?</a>
                 </li>
                 <li><a href="#core-game-loop" class="text-arcane-400 hover:text-arcane-300">2. Core Game Loop</a></li>
-                <li><a href="#wardens-explained" class="text-arcane-400 hover:text-arcane-300">3. Wardens Explained</a>
+                <li><a href="#all-wardens" class="text-arcane-400 hover:text-arcane-300">3. All 8 Wardens & Classes</a>
                 </li>
                 <li><a href="#strongholds" class="text-arcane-400 hover:text-arcane-300">4. Choosing Your Stronghold</a>
                 </li>
                 <li><a href="#raid-mechanics" class="text-arcane-400 hover:text-arcane-300">5. How Raids Work</a></li>
-                <li><a href="#first-match-tips" class="text-arcane-400 hover:text-arcane-300">6. Your First Match: 5
+                <li><a href="#first-match-tips" class="text-arcane-400 hover:text-arcane-300">6. Your First Match: 7
                         Essential Tips</a></li>
                 <li><a href="#common-mistakes" class="text-arcane-400 hover:text-arcane-300">7. Common Mistakes to
                         Avoid</a></li>
-                <li><a href="#faq" class="text-arcane-400 hover:text-arcane-300">8. FAQ</a></li>
+                <li><a href="#system-requirements" class="text-arcane-400 hover:text-arcane-300">8. System
+                        Requirements</a></li>
+                <li><a href="#faq" class="text-arcane-400 hover:text-arcane-300">9. FAQ</a></li>
             </ol>
         </nav>
 
         <!-- Article Content -->
         <article class="prose prose-invert max-w-none">
 
-            <!-- Section 1 -->
+            <!-- Section 1: What is Highguard -->
             <section id="what-is-highguard" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">1</span>
                     What is Highguard?
                 </h2>
                 <p class="text-gray-300 mb-4">
                     <strong>Highguard</strong> is a free-to-play <strong>PvP raid shooter</strong> developed by
-                    <strong>Wildlight Entertainment</strong>. Released on January 26, 2026 for PC (Steam), the game
+                    <strong>Wildlight Entertainment</strong>—a studio founded by veterans who worked on Apex Legends and
+                    Titanfall. Released on January 26, 2026 for PC (Steam), PlayStation 5, and Xbox Series X/S, the game
                     features 3v3 team battles where players take on the role of <strong>Wardens</strong>—arcane
                     gunslingers fighting for control of a mythical continent.
                 </p>
                 <p class="text-gray-300 mb-4">
                     Unlike traditional shooters, Highguard combines gunplay with <strong>base building, mounted
                         exploration, and raid mechanics</strong>. Each match is a dynamic cycle of looting, battling for
-                    objectives, and ultimately destroying the enemy team's base.
+                    the legendary <strong>Shieldbreaker</strong> sword, and ultimately destroying the enemy team's base.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    The game supports <strong>full cross-play and cross-progression</strong> across all platforms,
+                    meaning you can team up with friends regardless of their system and carry your progress everywhere.
                 </p>
                 <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-4 text-sm">
                     <strong class="text-arcane-400">💡 Key Takeaway:</strong> Think of Highguard as a blend of Hunt:
-                    Showdown's atmosphere, Rust's raiding, and hero shooter mechanics—all in a fantasy setting.
+                    Showdown's atmosphere, Rust's raiding, and hero shooter mechanics—all wrapped in a fantasy setting
+                    with mounted combat.
                 </div>
             </section>
 
-            <!-- Section 2 -->
+            <!-- Section 2: Core Game Loop -->
             <section id="core-game-loop" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">2</span>
                     Core Game Loop
                 </h2>
                 <p class="text-gray-300 mb-4">
-                    Every Highguard match follows a structured loop. Understanding this flow is crucial for new players:
+                    Every Highguard match follows a structured loop with distinct phases. Understanding this flow is
+                    crucial for new players:
                 </p>
 
                 <div class="space-y-4 mb-6">
-                    <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
-                        <h3 class="font-semibold text-white mb-2">Phase 1: Setup</h3>
-                        <p class="text-gray-400 text-sm">Choose your Warden, select a Stronghold (base), and reinforce
-                            your defenses. Customize your loadout before heading out.</p>
+                    <div class="phase-indicator bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 font-bold shrink-0">1</span>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2 font-display">Reinforce Phase</h3>
+                                <p class="text-gray-400 text-sm">Choose your Warden, select a Stronghold (base), and
+                                    reinforce up to 5 walls. Customize your starting loadout with two weapons and one
+                                    raid tool before heading out.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-indicator bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 font-bold shrink-0">2</span>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2 font-display">Gear Up Phase</h3>
+                                <p class="text-gray-400 text-sm">Mount up and ride across the map. Gather upgraded
+                                    weapons, armor, amulets, and saddles. Mine <strong>Vesper</strong> (the in-game
+                                    currency) from nodes and trade with the vendor <strong>Flynn</strong> for better
+                                    gear.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-indicator bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 font-bold shrink-0">3</span>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2 font-display">Shieldbreaker Battle</h3>
+                                <p class="text-gray-400 text-sm">When magical storms appear, a legendary sword called
+                                    the <strong>Shieldbreaker</strong> spawns at its center. Both teams fight to claim
+                                    it—this is the pivotal moment of every match.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase-indicator bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center text-red-400 font-bold shrink-0">4</span>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2 font-display">The Raid</h3>
+                                <p class="text-gray-400 text-sm">Carry the Shieldbreaker to the enemy base and plunge it
+                                    into their shields. This summons a <strong>Siege Tower</strong> as your respawn
+                                    point. Breach the base and plant bombs on generators or destroy the <strong>Anchor
+                                        Stone</strong>.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
-                        <h3 class="font-semibold text-white mb-2">Phase 2: Exploration & Looting</h3>
-                        <p class="text-gray-400 text-sm">Mount up and ride across the map. Gather upgraded weapons,
-                            armor, amulets, and saddles. The better your gear, the stronger you'll be in fights.</p>
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center text-yellow-400 font-bold shrink-0">5</span>
+                            <div>
+                                <h3 class="font-semibold text-white mb-2 font-display">Victory or Escalation</h3>
+                                <p class="text-gray-400 text-sm">Destroy the enemy base (reduce health to 0) to win. If
+                                    the raid fails, shields regenerate, loot quality escalates, and a new Shieldbreaker
+                                    spawns elsewhere. The cycle continues until one base falls.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
-                        <h3 class="font-semibold text-white mb-2">Phase 3: Shieldbreaker Battle</h3>
-                        <p class="text-gray-400 text-sm">When magical storms appear, a legendary sword called the
-                            <strong>Shieldbreaker</strong> spawns at its center. Both teams fight to claim it.</p>
-                    </div>
-                    <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
-                        <h3 class="font-semibold text-white mb-2">Phase 4: The Raid</h3>
-                        <p class="text-gray-400 text-sm">Carry the Shieldbreaker to the enemy base, summon a
-                            <strong>Siege Tower</strong> to break their shields, then infiltrate and plant bombs on
-                            their generators or anchor stone.</p>
-                    </div>
-                    <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-4">
-                        <h3 class="font-semibold text-white mb-2">Phase 5: Victory or Reset</h3>
-                        <p class="text-gray-400 text-sm">Destroy the enemy base to win. If the raid fails, shields
-                            regenerate, gear escalates, and a new Shieldbreaker spawns elsewhere.</p>
-                    </div>
+                </div>
+
+                <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4 text-sm">
+                    <strong class="text-yellow-400">⚠️ Match Length:</strong> Matches can vary from 7 minutes (one-sided
+                    domination) to over 30 minutes if teams trade raids back and forth. Each base has 100 health at the
+                    start.
                 </div>
             </section>
 
-            <!-- Section 3 -->
-            <section id="wardens-explained" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+            <!-- Section 3: All 8 Wardens -->
+            <section id="all-wardens" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">3</span>
-                    Wardens Explained
+                    All 8 Wardens & Classes
                 </h2>
                 <p class="text-gray-300 mb-4">
                     <strong>Wardens</strong> are the playable characters in Highguard. Each is an arcane gunslinger with
-                    unique magical abilities. The roster is ever-growing, with new Wardens added in monthly Episodes.
+                    three unique abilities: a <strong>Passive</strong> (always active), <strong>Tactical</strong>
+                    (cooldown-based), and <strong>Ultimate</strong> (charges over time).
                 </p>
 
-                <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-5 mb-4">
-                    <h3 class="font-semibold text-white mb-3">Warden Roles (Based on Abilities)</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><span class="text-arcane-400">▸</span> <strong>Raid Combat:</strong> Abilities for breaching
-                            and destruction</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Siege Stealth:</strong> Infiltration and
-                            flanking</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Base Defense:</strong> Repair and protection
-                            abilities</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Harvesting:</strong> Enhanced loot gathering
-                        </li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Open-World Combat:</strong> Excels in field
-                            fights</li>
-                    </ul>
+                <p class="text-gray-300 mb-6">
+                    Highguard launched with <strong>8 Wardens</strong> across <strong>5 classes</strong>. New Wardens
+                    are added with monthly Episode updates—all free for players.
+                </p>
+
+                <!-- Warden Classes Overview -->
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-5 mb-6">
+                    <h3 class="font-semibold text-white mb-3 font-display">Warden Classes</h3>
+                    <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                        <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                            <strong>Assault:</strong> Offensive combat, damage output
+                        </div>
+                        <div class="flex items-center gap-2"><span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                            <strong>Defensive:</strong> Protection, space control
+                        </div>
+                        <div class="flex items-center gap-2"><span class="w-3 h-3 bg-orange-500 rounded-full"></span>
+                            <strong>Destruction:</strong> Breaking structures, base damage
+                        </div>
+                        <div class="flex items-center gap-2"><span class="w-3 h-3 bg-cyan-500 rounded-full"></span>
+                            <strong>Recon:</strong> Scouting, enemy detection
+                        </div>
+                        <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <strong>Support:</strong> Healing, team utility
+                        </div>
+                    </div>
                 </div>
 
-                <p class="text-gray-400 text-sm">
-                    <em>Note: Specific Warden names and detailed abilities are still being documented by the community.
-                        Check our <a href="/wardens/tier-list/" class="text-arcane-400 hover:text-arcane-300">Warden
-                            Tier List</a> for the latest rankings.</em>
-                </p>
+                <!-- All 8 Wardens Grid -->
+                <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                    <!-- Redmane -->
+                    <div class="warden-card bg-dark-800 border border-orange-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🦁</div>
+                            <div>
+                                <h4 class="font-semibold text-orange-400 font-display">Redmane</h4>
+                                <span class="text-xs text-gray-500">Destruction Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Aggressive breacher who tears through defenses with raw
+                            power.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Enraged (speed buff on kills)</div>
+                            <div><strong>Tactical:</strong> Pounce (charge through walls)</div>
+                            <div><strong>Ultimate:</strong> Beast's Roar (destroys structures)</div>
+                        </div>
+                    </div>
+
+                    <!-- Condor -->
+                    <div class="warden-card bg-dark-800 border border-cyan-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🦅</div>
+                            <div>
+                                <h4 class="font-semibold text-cyan-400 font-display">Condor</h4>
+                                <span class="text-xs text-gray-500">Recon Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Scouting specialist using a trained bird for enemy
+                            detection.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Hunter's Instinct (enemy alerts)</div>
+                            <div><strong>Tactical:</strong> Eyes in the Sky (bird scan)</div>
+                            <div><strong>Ultimate:</strong> Soaring Guardian (reveal enemies)</div>
+                        </div>
+                    </div>
+
+                    <!-- Atticus -->
+                    <div class="warden-card bg-dark-800 border border-red-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-2xl">⚡
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-400 font-display">Atticus</h4>
+                                <span class="text-xs text-gray-500">Assault Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Lightning-powered attacker with strong area pressure.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Supercharged Axe (electric melee)</div>
+                            <div><strong>Tactical:</strong> Shockspear (thrown lightning)</div>
+                            <div><strong>Ultimate:</strong> Powerstorm (rain lightning)</div>
+                        </div>
+                    </div>
+
+                    <!-- Kai -->
+                    <div class="warden-card bg-dark-800 border border-blue-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                ❄️</div>
+                            <div>
+                                <h4 class="font-semibold text-blue-400 font-display">Kai</h4>
+                                <span class="text-xs text-gray-500">Defensive Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Ice-based defender who repairs and fortifies structures.
+                        </p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Frozen Repair (heal walls)</div>
+                            <div><strong>Tactical:</strong> Ice Wall (block sightlines)</div>
+                            <div><strong>Ultimate:</strong> Frost Giant (transform)</div>
+                        </div>
+                    </div>
+
+                    <!-- Slade -->
+                    <div class="warden-card bg-dark-800 border border-red-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-2xl">🔥
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-red-400 font-display">Slade</h4>
+                                <span class="text-xs text-gray-500">Assault Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Fire-based brawler with area denial and zone control.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Firebomb (magma on death)</div>
+                            <div><strong>Tactical:</strong> Heatwave (molten wave)</div>
+                            <div><strong>Ultimate:</strong> Firestorm (fire rain)</div>
+                        </div>
+                    </div>
+
+                    <!-- Scarlet -->
+                    <div class="warden-card bg-dark-800 border border-red-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🗡️</div>
+                            <div>
+                                <h4 class="font-semibold text-red-400 font-display">Scarlet</h4>
+                                <span class="text-xs text-gray-500">Assault Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Stealth assassin with mobility and flanking abilities.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Shifting Sands (phase through walls)</div>
+                            <div><strong>Tactical:</strong> Sandstorm (stealth mode)</div>
+                            <div><strong>Ultimate:</strong> Whirling Blades (6 daggers)</div>
+                        </div>
+                    </div>
+
+                    <!-- Una -->
+                    <div class="warden-card bg-dark-800 border border-blue-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🌿</div>
+                            <div>
+                                <h4 class="font-semibold text-blue-400 font-display">Una</h4>
+                                <span class="text-xs text-gray-500">Defensive Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Spirit summoner with utility and disruption abilities.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Helping Hand (extra loot)</div>
+                            <div><strong>Tactical:</strong> Forest Wisps (grenade spirits)</div>
+                            <div><strong>Ultimate:</strong> Tree Walker (summon giant)</div>
+                        </div>
+                    </div>
+
+                    <!-- Mara -->
+                    <div class="warden-card bg-dark-800 border border-green-500/30 rounded-xl p-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                💜</div>
+                            <div>
+                                <h4 class="font-semibold text-green-400 font-display">Mara</h4>
+                                <span class="text-xs text-gray-500">Support Class</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-2">Team-focused support with shields and respawn utility.</p>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <div><strong>Passive:</strong> Sacrifice (faster cooldowns)</div>
+                            <div><strong>Tactical:</strong> Soul Armor (overshield ally)</div>
+                            <div><strong>Ultimate:</strong> Immortal Coil (team spawn)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-4 text-sm">
+                    <strong class="text-arcane-400">💡 Beginner Recommendation:</strong> Start with
+                    <strong>Atticus</strong> or <strong>Slade</strong> (Assault) for straightforward combat, or
+                    <strong>Kai</strong> (Defensive) if you prefer supporting your team.
+                </div>
             </section>
 
-            <!-- Section 4 -->
+            <!-- Section 4: Strongholds -->
             <section id="strongholds" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">4</span>
                     Choosing Your Stronghold
                 </h2>
                 <p class="text-gray-300 mb-4">
-                    Before each match, your team selects a <strong>Stronghold</strong>—your base of operations. Each
+                    Before each match, your team votes on a <strong>Stronghold</strong>—your base of operations. Each
                     stronghold has different layouts, advantages, and vulnerabilities.
                 </p>
 
                 <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-5 mb-4">
-                    <h3 class="font-semibold text-white mb-3">Stronghold Considerations</h3>
+                    <h3 class="font-semibold text-white mb-3 font-display">Stronghold Considerations</h3>
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><span class="text-arcane-400">▸</span> <strong>Layout:</strong> Some have open designs,
                             others maze-like corridors</li>
@@ -277,20 +554,22 @@
                             easy they are to defend</li>
                         <li><span class="text-arcane-400">▸</span> <strong>Anchor Stone Location:</strong> Central vs
                             hidden positions</li>
+                        <li><span class="text-arcane-400">▸</span> <strong>Wall Reinforcement:</strong> Choose 5 walls
+                            to fortify at match start</li>
                         <li><span class="text-arcane-400">▸</span> <strong>Team Composition:</strong> Match your base to
                             your Warden abilities</li>
                     </ul>
                 </div>
 
-                <p class="text-gray-400 text-sm">
-                    For detailed base comparisons, see our <a href="/guides/strongholds/"
-                        class="text-arcane-400 hover:text-arcane-300">Stronghold Strategy Guide</a>.
-                </p>
+                <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4 text-sm">
+                    <strong class="text-yellow-400">⚠️ Note:</strong> New bases are added with Episode updates. Episode
+                    2 (February 2026) and Episode 3 (April-May 2026) will each introduce additional stronghold options.
+                </div>
             </section>
 
-            <!-- Section 5 -->
+            <!-- Section 5: Raid Mechanics -->
             <section id="raid-mechanics" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">5</span>
                     How Raids Work
                 </h2>
@@ -314,7 +593,8 @@
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">2</td>
                                 <td class="px-4 py-3 text-gray-300">Race to the storm's center to claim the
-                                    <strong>Shieldbreaker</strong></td>
+                                    <strong>Shieldbreaker</strong>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">3</td>
@@ -324,77 +604,106 @@
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">4</td>
                                 <td class="px-4 py-3 text-gray-300">Carry the Shieldbreaker to the enemy base perimeter
-                                </td>
+                                    (carrier is visible on map)</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">5</td>
                                 <td class="px-4 py-3 text-gray-300">Plunge the sword into their outer shield to weaken
-                                    it</td>
+                                    it (deals 30 damage)</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">6</td>
-                                <td class="px-4 py-3 text-gray-300">Summon a <strong>Siege Tower</strong> to fully break
-                                    the shields</td>
+                                <td class="px-4 py-3 text-gray-300">A <strong>Siege Tower</strong> spawns as your
+                                    forward respawn point</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">7</td>
-                                <td class="px-4 py-3 text-gray-300">Breach the base using guns, raid tools, or arcane
-                                    abilities</td>
+                                <td class="px-4 py-3 text-gray-300">Breach using guns, raid tools (Blast Hammer, Rocket
+                                    Launcher), or abilities</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">8</td>
-                                <td class="px-4 py-3 text-gray-300">Plant bombs on generators or destroy the anchor
-                                    stone directly</td>
+                                <td class="px-4 py-3 text-gray-300">Plant bombs on <strong>generators</strong> (2 total)
+                                    OR destroy the <strong>Anchor Stone</strong> directly</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4 text-sm">
-                    <strong class="text-yellow-400">⚠️ Pro Tip:</strong> Destroying the anchor stone instantly wins, but
-                    it's usually heavily defended. Chipping away at multiple generators is often safer.
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+                        <h4 class="font-semibold text-red-400 mb-2 font-display">🎯 Anchor Stone</h4>
+                        <p class="text-gray-400 text-sm">Destroying the Anchor Stone <strong>instantly wins</strong> the
+                            match but it's usually the most heavily defended spot.</p>
+                    </div>
+                    <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
+                        <h4 class="font-semibold text-blue-400 mb-2 font-display">⚙️ Generators</h4>
+                        <p class="text-gray-400 text-sm">There are 2 generators. Destroying both wins, or damaging one
+                            chips away at base health. Often the safer strategy.</p>
+                    </div>
+                </div>
+
+                <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-4 text-sm">
+                    <strong class="text-arcane-400">💡 Pro Tip:</strong> If defenders eliminate all attackers or the
+                    Siege Tower energy depletes, the raid fails. Shields repair, loot escalates, and a new Shieldbreaker
+                    spawns elsewhere.
                 </div>
             </section>
 
-            <!-- Section 6 -->
+            <!-- Section 6: First Match Tips -->
             <section id="first-match-tips" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">6</span>
-                    Your First Match: 5 Essential Tips
+                    Your First Match: 7 Essential Tips
                 </h2>
 
                 <div class="space-y-4">
                     <div class="bg-dark-800 border-l-4 border-green-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">1. Prioritize Looting Early</h3>
-                        <p class="text-gray-400 text-sm">Better gear = better odds. Spend the first few minutes
-                            gathering upgraded weapons and armor before engaging.</p>
+                        <h3 class="font-semibold text-white mb-1 font-display">1. Prioritize Looting Early—But Not Too
+                            Long</h3>
+                        <p class="text-gray-400 text-sm">Better gear = better odds. Spend the first minutes gathering
+                            weapons and armor, but stop when you have blue armor and a decent weapon. Don't miss the
+                            Shieldbreaker spawn.</p>
                     </div>
                     <div class="bg-dark-800 border-l-4 border-blue-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">2. Stay With Your Team</h3>
-                        <p class="text-gray-400 text-sm">3v1 fights are unwinnable. Always move and fight as a unit.
-                            Coordinate via voice chat if possible.</p>
+                        <h3 class="font-semibold text-white mb-1 font-display">2. Stay With Your Team</h3>
+                        <p class="text-gray-400 text-sm">3v1 fights are unwinnable. In a 3v3 format, every player
+                            matters. Always move and fight as a unit—coordinate via voice chat if possible.</p>
                     </div>
                     <div class="bg-dark-800 border-l-4 border-purple-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">3. Learn to Mount Quickly</h3>
-                        <p class="text-gray-400 text-sm">Mobility is key. Practice mounting and dismounting smoothly to
-                            escape or reposition.</p>
+                        <h3 class="font-semibold text-white mb-1 font-display">3. Master Mount Mechanics</h3>
+                        <p class="text-gray-400 text-sm">Mounts aren't just transport—they're tactical tools. Practice
+                            mounting/dismounting smoothly. Bind mount summon to an easily accessible key.</p>
                     </div>
                     <div class="bg-dark-800 border-l-4 border-yellow-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">4. Watch the Storm</h3>
-                        <p class="text-gray-400 text-sm">When the magical storm appears, be ready to contest or position
-                            strategically. Don't ignore it.</p>
+                        <h3 class="font-semibold text-white mb-1 font-display">4. Watch the Storm</h3>
+                        <p class="text-gray-400 text-sm">When the magical storm appears, be ready to rotate. Position
+                            near the Shieldbreaker spawn with time to spare—don't be caught looting.</p>
                     </div>
                     <div class="bg-dark-800 border-l-4 border-red-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">5. Defend When Needed</h3>
-                        <p class="text-gray-400 text-sm">If the enemy has the Shieldbreaker, fall back to base. Repel
-                            the raid until their Siege Tower energy depletes.</p>
+                        <h3 class="font-semibold text-white mb-1 font-display">5. Know Your Role</h3>
+                        <p class="text-gray-400 text-sm">If the enemy has the Shieldbreaker, consider whether to
+                            intercept or fall back to defend. Sometimes setting up an ambush route beats a direct chase.
+                        </p>
+                    </div>
+                    <div class="bg-dark-800 border-l-4 border-cyan-500 rounded-r-lg p-4">
+                        <h3 class="font-semibold text-white mb-1 font-display">6. Use Raid Tools Effectively</h3>
+                        <p class="text-gray-400 text-sm">Bring a Blast Hammer for walls or Rocket Launcher for
+                            structures. Coordinate with teammates—use tools in combination with abilities for maximum
+                            impact.</p>
+                    </div>
+                    <div class="bg-dark-800 border-l-4 border-orange-500 rounded-r-lg p-4">
+                        <h3 class="font-semibold text-white mb-1 font-display">7. Don't Give Up After One Failed Raid
+                        </h3>
+                        <p class="text-gray-400 text-sm">If your raid fails, the match isn't over. Loot escalates each
+                            cycle. Regroup, gear up again, and prepare for the next Shieldbreaker spawn.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 7 -->
+            <!-- Section 7: Common Mistakes -->
             <section id="common-mistakes" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">7</span>
                     Common Mistakes to Avoid
                 </h2>
@@ -409,40 +718,92 @@
                         </thead>
                         <tbody class="divide-y divide-arcane-900/30">
                             <tr>
-                                <td class="px-4 py-3 text-gray-400">Rush to fight with starter gear</td>
-                                <td class="px-4 py-3 text-gray-300">Loot first, fight second</td>
+                                <td class="px-4 py-3 text-gray-400">Rush fights with starter gear</td>
+                                <td class="px-4 py-3 text-gray-300">Loot until you have blue armor minimum</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-gray-400">Loot the entire gear phase</td>
+                                <td class="px-4 py-3 text-gray-300">Stop looting and rotate to Shieldbreaker early</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-gray-400">Solo push into enemy base</td>
-                                <td class="px-4 py-3 text-gray-300">Coordinate team pushes</td>
+                                <td class="px-4 py-3 text-gray-300">Coordinate team pushes—communicate constantly</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-gray-400">Ignore the Shieldbreaker spawns</td>
-                                <td class="px-4 py-3 text-gray-300">Contest every storm</td>
+                                <td class="px-4 py-3 text-gray-300">Contest every storm—it's the match's pivot point
+                                </td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-gray-400">Leave your base completely undefended</td>
-                                <td class="px-4 py-3 text-gray-300">Rotate one player back when threatened</td>
+                                <td class="px-4 py-3 text-gray-300">Rotate one player back when enemy has Shieldbreaker
+                                </td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-gray-400">Forget to reinforce walls at start</td>
-                                <td class="px-4 py-3 text-gray-300">Spend 30 seconds on base prep</td>
+                                <td class="px-4 py-3 text-gray-300">Spend 30 seconds on base prep—fortify 5 walls</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-gray-400">Chase kills over objectives</td>
+                                <td class="px-4 py-3 text-gray-300">Every death should serve the objective—trade
+                                    strategically</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- Section 8: FAQ -->
-            <section id="faq" class="mb-12">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <!-- Section 8: System Requirements -->
+            <section id="system-requirements" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">8</span>
+                    System Requirements (PC)
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div class="bg-dark-800 border border-yellow-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-yellow-400 mb-3 font-display">⚙️ Minimum</h3>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><strong>OS:</strong> Windows 10 (64-bit)</li>
+                            <li><strong>CPU:</strong> Intel i5-6600K / AMD Ryzen 5 1600</li>
+                            <li><strong>RAM:</strong> 8 GB</li>
+                            <li><strong>GPU:</strong> GTX 1060 6GB / RX 580 8GB</li>
+                            <li><strong>DirectX:</strong> Version 12</li>
+                            <li><strong>Storage:</strong> 25 GB SSD</li>
+                            <li><strong>Network:</strong> Broadband connection</li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-800 border border-green-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-green-400 mb-3 font-display">🚀 Recommended</h3>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><strong>OS:</strong> Windows 11 (64-bit)</li>
+                            <li><strong>CPU:</strong> Intel i5-9600K / AMD Ryzen 5 3600</li>
+                            <li><strong>RAM:</strong> 12 GB</li>
+                            <li><strong>GPU:</strong> RTX 2080 8GB / RX 6650 XT 8GB</li>
+                            <li><strong>DirectX:</strong> Version 12</li>
+                            <li><strong>Storage:</strong> 25 GB NVMe SSD</li>
+                            <li><strong>Network:</strong> Broadband connection</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-sm">
+                    <strong class="text-red-400">⚠️ Important:</strong> Highguard uses <strong>Easy Anti-Cheat</strong>
+                    which requires both <strong>Secure Boot</strong> and <strong>TPM 2.0</strong> enabled in your BIOS.
+                    Check your settings before installing.
+                </div>
+            </section>
+
+            <!-- Section 9: FAQ -->
+            <section id="faq" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">9</span>
                     Frequently Asked Questions
                 </h2>
 
                 <div class="space-y-3">
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
-                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
                             What is Highguard?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -452,10 +813,10 @@
                         </summary>
                         <div class="px-4 pb-4 text-gray-400">Highguard is a free-to-play PvP raid shooter by Wildlight
                             Entertainment. Teams of 3 Wardens battle for control of a mythical continent through
-                            looting, objective fights, and base raids.</div>
+                            looting, objective fights, and base raids. Available on PC, PS5, and Xbox Series X/S.</div>
                     </details>
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
-                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
                             Is Highguard completely free?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -464,10 +825,24 @@
                             </svg>
                         </summary>
                         <div class="px-4 pb-4 text-gray-400">Yes, all core content is free. Monthly Episode updates add
-                            new Wardens, weapons, maps, and modes at no cost.</div>
+                            new Wardens, weapons, maps, and modes at no cost. The game has cosmetic-only monetization
+                            with no pay-to-win mechanics.</div>
                     </details>
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
-                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
+                            How many Wardens are in Highguard?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Highguard launched with 8 Wardens: Redmane, Condor,
+                            Atticus, Kai, Slade, Scarlet, Una, and Mara. A new Warden is added approximately every two
+                            months with Episode updates.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
                             Can I play solo?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -476,10 +851,24 @@
                             </svg>
                         </summary>
                         <div class="px-4 pb-4 text-gray-400">Highguard is designed for 3-player teams. You can queue
-                            solo and be matched with teammates, but coordinated squads have an advantage.</div>
+                            solo and be matched with teammates, but coordinated squads have a significant advantage due
+                            to the communication-heavy gameplay.</div>
                     </details>
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
-                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
+                            Is there cross-play?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Yes, Highguard supports full cross-play across PC, PS5, and
+                            Xbox Series X/S. Cross-progression is also enabled, so your progress carries between
+                            platforms.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
                             What are the PC requirements?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -489,7 +878,32 @@
                         </summary>
                         <div class="px-4 pb-4 text-gray-400"><strong>Minimum:</strong> Windows 10, i5-6600K, 8GB RAM,
                             GTX 1060, 25GB SSD.<br><strong>Recommended:</strong> Windows 11, i5-9600K, 12GB RAM, RTX
-                            2080, NVMe SSD.</div>
+                            2080, NVMe SSD.<br><strong>Note:</strong> Requires Secure Boot and TPM 2.0 enabled.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
+                            What is the Shieldbreaker?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">The Shieldbreaker is a legendary sword that spawns during
+                            magical storms. Teams fight to control it because it's the only way to break enemy base
+                            shields and initiate a raid. The carrier is visible on the map.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium font-display">
+                            When will Ranked Mode release?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Ranked Mode is confirmed for Episode 2 Part 1, expected in
+                            February 2026. The roadmap shows 7 content updates planned throughout 2026.</div>
                     </details>
                 </div>
             </section>
@@ -498,13 +912,13 @@
 
         <!-- Related Guides -->
         <section class="border-t border-arcane-900/30 pt-10 mt-10">
-            <h2 class="text-xl font-bold mb-6">📚 Continue Learning</h2>
+            <h2 class="font-display text-xl font-bold mb-6">📚 Continue Learning</h2>
             <div class="grid sm:grid-cols-2 gap-4">
                 <a href="/wardens/tier-list/"
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
                     <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center text-xl">🏆</div>
                     <div>
-                        <h3 class="font-semibold">Warden Tier List</h3>
+                        <h3 class="font-semibold font-display">Warden Tier List</h3>
                         <p class="text-gray-400 text-sm">Find the best characters</p>
                     </div>
                 </a>
@@ -512,7 +926,7 @@
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
                     <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-xl">⚡</div>
                     <div>
-                        <h3 class="font-semibold">Complete Raid Guide</h3>
+                        <h3 class="font-semibold font-display">Complete Raid Guide</h3>
                         <p class="text-gray-400 text-sm">Master raid mechanics</p>
                     </div>
                 </a>
@@ -520,7 +934,7 @@
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
                     <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-xl">🔫</div>
                     <div>
-                        <h3 class="font-semibold">Best Weapons Guide</h3>
+                        <h3 class="font-semibold font-display">Best Weapons Guide</h3>
                         <p class="text-gray-400 text-sm">Top guns and stats</p>
                     </div>
                 </a>
@@ -528,7 +942,7 @@
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl">🏰</div>
                     <div>
-                        <h3 class="font-semibold">Stronghold Strategy</h3>
+                        <h3 class="font-semibold font-display">Stronghold Strategy</h3>
                         <p class="text-gray-400 text-sm">Choose the best base</p>
                     </div>
                 </a>
@@ -537,13 +951,16 @@
 
         <!-- Version & Disclaimer -->
         <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mt-10">
-            <h3 class="font-semibold text-gray-300 mb-3">📋 Version & Disclaimer</h3>
+            <h3 class="font-semibold text-gray-300 mb-3 font-display">📋 Version & Disclaimer</h3>
             <ul class="text-sm text-gray-500 space-y-1">
                 <li><strong>Article Version:</strong> Based on Highguard Episode 1 (Launch, Jan 26, 2026)</li>
                 <li><strong>Last Updated:</strong> January 30, 2026</li>
-                <li><strong>Sources:</strong> Steam Official Store Page, Developer Descriptions</li>
-                <li><strong>Note:</strong> Some details (specific Warden names, exact gear stats) may change with future
-                    patches. We update content monthly with each Episode release.</li>
+                <li><strong>Sources:</strong> Steam Store Page, Xbox Store, Wikipedia, Official Launch Showcase,
+                    Community Playtests</li>
+                <li><strong>Verified Info:</strong> All Warden names, abilities, and mechanics have been
+                    cross-referenced with multiple sources.</li>
+                <li><strong>Note:</strong> Some values (e.g., exact damage numbers, cooldowns) may change with future
+                    patches. We update content with each Episode release.</li>
             </ul>
             <p class="text-xs text-gray-600 mt-3">Highguard.wiki is a fan-made resource. All game content © 2026
                 Wildlight Entertainment Inc.</p>
