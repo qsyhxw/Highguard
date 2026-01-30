@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highguard Wiki — Guides, Builds, Tier Lists & Tools (2026)</title>
+    <meta name="description"
+        content="Your ultimate Highguard guide hub. Warden tier lists, weapon stats, raid strategies, build planner & patch notes. Master the PvP raid shooter today.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://highguard.wiki/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Highguard Wiki — Guides, Builds, Tier Lists & Tools">
+    <meta property="og:description"
+        content="Your ultimate Highguard guide hub. Warden tier lists, weapon stats, raid strategies & tools.">
+    <meta property="og:url" content="https://highguard.wiki/">
+    <meta property="og:site_name" content="Highguard Wiki">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highguard Wiki — Guides, Builds & Tools">
+    <meta name="twitter:description" content="Master the PvP raid shooter with tier lists, builds, and strategies.">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcane: { 50: '#f0f4ff', 100: '#e0e7ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#1e1b4b' },
+                        dark: { 800: '#1e1e2e', 900: '#0f0f1a', 950: '#080810' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1e1b4b 50%, #0f0f1a 100%);
+        }
+
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Highguard Wiki",
+        "url": "https://highguard.wiki/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://highguard.wiki/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Highguard Wiki",
+        "url": "https://highguard.wiki/",
+        "description": "Fan-made wiki and guide hub for Highguard, the PvP raid shooter by Wildlight Entertainment."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "What is Highguard?", "acceptedAnswer": {"@type": "Answer", "text": "Highguard is a free-to-play PvP raid shooter by Wildlight Entertainment where 3-player teams fight as Wardens—arcane gunslingers battling for control of a mythical continent."}},
+            {"@type": "Question", "name": "Is Highguard free to play?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, Highguard is completely free to play on Steam with all core content available at no cost."}},
+            {"@type": "Question", "name": "What platforms is Highguard on?", "acceptedAnswer": {"@type": "Answer", "text": "Highguard is currently available on PC via Steam (Windows 10/11)."}},
+            {"@type": "Question", "name": "How many players per team in Highguard?", "acceptedAnswer": {"@type": "Answer", "text": "Highguard features 3v3 team-based gameplay with each team consisting of three Wardens."}},
+            {"@type": "Question", "name": "What are Wardens in Highguard?", "acceptedAnswer": {"@type": "Answer", "text": "Wardens are the playable characters in Highguard—arcane gunslingers with unique magical abilities, guns, and raid tools."}},
+            {"@type": "Question", "name": "How do raids work in Highguard?", "acceptedAnswer": {"@type": "Answer", "text": "Teams fight for the Shieldbreaker sword, carry it to enemy bases to lower shields, summon Siege Towers, then breach and destroy enemy generators or anchor stones."}},
+            {"@type": "Question", "name": "What is the Shieldbreaker?", "acceptedAnswer": {"@type": "Answer", "text": "The Shieldbreaker is a magical sword that spawns during storms—essential for breaking enemy base shields to initiate raids."}},
+            {"@type": "Question", "name": "How often does Highguard update?", "acceptedAnswer": {"@type": "Answer", "text": "Highguard releases new Episodes monthly with new maps, Wardens, weapons, modes, and more—all free for players."}},
+            {"@type": "Question", "name": "What are Highguard system requirements?", "acceptedAnswer": {"@type": "Answer", "text": "Minimum: Windows 10, Intel i5-6600K/Ryzen R5 1600, 8GB RAM, GTX 1060/RX 580, 25GB SSD. Recommended: Windows 11, i5-9600K/Ryzen 5 3600, 12GB RAM, RTX 2080/RX 6650 XT."}},
+            {"@type": "Question", "name": "Is Highguard Wiki official?", "acceptedAnswer": {"@type": "Answer", "text": "No, Highguard.wiki is a fan-made resource not affiliated with Wildlight Entertainment. All game content © Wildlight Entertainment Inc."}}
+        ]
+    }
+    </script>
+</head>
+
+<body class="bg-dark-950 text-gray-100 font-sans antialiased">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur border-b border-arcane-900/50">
+        <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-xl font-bold text-white" aria-label="Highguard Wiki Home">
+                <svg class="w-8 h-8 text-arcane-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5L18 8v8l-6 3.75L6 16V8l6-3.5z" />
+                    <path d="M12 6v12M8 8l4 2.5L16 8" />
+                </svg>
+                <span>Highguard<span class="text-arcane-500">.wiki</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm">
+                <a href="/guides/" class="hover:text-arcane-400 transition">Guides</a>
+                <a href="/wardens/" class="hover:text-arcane-400 transition">Wardens</a>
+                <a href="/weapons/" class="hover:text-arcane-400 transition">Weapons</a>
+                <a href="/maps/" class="hover:text-arcane-400 transition">Maps</a>
+                <a href="/tools/" class="hover:text-arcane-400 transition">Tools</a>
+                <a href="/patch-notes/" class="hover:text-arcane-400 transition">Patch Notes</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-t border-arcane-900/50 px-4 py-4">
+            <a href="/guides/" class="block py-2 hover:text-arcane-400">Guides</a>
+            <a href="/wardens/" class="block py-2 hover:text-arcane-400">Wardens</a>
+            <a href="/weapons/" class="block py-2 hover:text-arcane-400">Weapons</a>
+            <a href="/maps/" class="block py-2 hover:text-arcane-400">Maps</a>
+            <a href="/tools/" class="block py-2 hover:text-arcane-400">Tools</a>
+            <a href="/patch-notes/" class="block py-2 hover:text-arcane-400">Patch Notes</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== HERO SECTION ========== -->
+        <section class="hero-gradient py-20 md:py-32 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+                style="background-image: radial-gradient(circle at 50% 50%, #6366f1 0%, transparent 50%);"></div>
+            <div class="max-w-4xl mx-auto px-4 relative z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Highguard Wiki: The Complete Guide to <span class="text-arcane-400">Wardens, Weapons & Raids</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Your #1 resource for the free-to-play PvP raid shooter by Wildlight Entertainment. Tier lists,
+                    builds, and strategies updated with every Episode.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/guides/beginners/"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-arcane-600 hover:bg-arcane-700 text-white font-semibold rounded-lg transition glow">
+                        New Player? Start Here
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                    <a href="/wardens/tier-list/"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-dark-800 hover:bg-dark-900 border border-arcane-500/50 text-white font-semibold rounded-lg transition">
+                        View Warden Tier List
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== START HERE - QUICK ENTRY ========== -->
+        <section class="py-16 bg-dark-900">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">🎮 New to Highguard? Start Here</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="/guides/beginners/"
+                        class="card-hover block bg-dark-800 rounded-xl p-6 border border-arcane-900/30">
+                        <div class="w-12 h-12 bg-arcane-600/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-arcane-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">How to Play</h3>
+                        <p class="text-gray-400 text-sm">Complete beginner's guide covering core mechanics, controls,
+                            and your first match.</p>
+                    </a>
+                    <a href="/guides/raiding/"
+                        class="card-hover block bg-dark-800 rounded-xl p-6 border border-arcane-900/30">
+                        <div class="w-12 h-12 bg-arcane-600/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-arcane-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Raid Mechanics</h3>
+                        <p class="text-gray-400 text-sm">Master Shieldbreaker battles, Siege Towers, and base
+                            destruction strategies.</p>
+                    </a>
+                    <a href="/guides/strongholds/"
+                        class="card-hover block bg-dark-800 rounded-xl p-6 border border-arcane-900/30">
+                        <div class="w-12 h-12 bg-arcane-600/20 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-arcane-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Choose Your Stronghold</h3>
+                        <p class="text-gray-400 text-sm">Compare base layouts, defenses, and pick the best stronghold
+                            for your team.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TOOLS SECTION ========== -->
+        <section class="py-16 bg-dark-950">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">🛠️ Interactive Tools</h2>
+                <p class="text-gray-400 text-center mb-10 max-w-xl mx-auto">Plan builds, compare weapons, and calculate
+                    damage with our free tools.</p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="/tools/build-planner/"
+                        class="card-hover block bg-gradient-to-br from-arcane-900/40 to-dark-800 rounded-xl p-6 border border-arcane-500/30">
+                        <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-2xl">⚔️</span> Build Planner
+                        </h3>
+                        <p class="text-gray-400 text-sm">Create and share Warden loadouts with weapons, armor, and
+                            amulets.</p>
+                    </a>
+                    <a href="/tools/damage-calculator/"
+                        class="card-hover block bg-gradient-to-br from-arcane-900/40 to-dark-800 rounded-xl p-6 border border-arcane-500/30">
+                        <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-2xl">📊</span> Damage Calculator
+                        </h3>
+                        <p class="text-gray-400 text-sm">Compare weapon DPS, time-to-kill, and effective damage ranges.
+                        </p>
+                    </a>
+                    <a href="/weapons/compare/"
+                        class="card-hover block bg-gradient-to-br from-arcane-900/40 to-dark-800 rounded-xl p-6 border border-arcane-500/30">
+                        <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-2xl">🔫</span> Weapon Compare
+                        </h3>
+                        <p class="text-gray-400 text-sm">Side-by-side weapon stats with sortable columns and filters.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== POPULAR GUIDES ========== -->
+        <section class="py-16 bg-dark-900">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">📖 Popular Guides</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/wardens/tier-list/"
+                        class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-5 border border-arcane-900/30">
+                        <div
+                            class="w-14 h-14 bg-yellow-500/20 rounded-lg flex items-center justify-center text-2xl shrink-0">
+                            🏆</div>
+                        <div>
+                            <h3 class="font-semibold">Warden Tier List</h3>
+                            <p class="text-gray-400 text-sm">Best characters ranked S to C tier</p>
+                        </div>
+                    </a>
+                    <a href="/weapons/tier-list/"
+                        class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-5 border border-arcane-900/30">
+                        <div
+                            class="w-14 h-14 bg-red-500/20 rounded-lg flex items-center justify-center text-2xl shrink-0">
+                            🔫</div>
+                        <div>
+                            <h3 class="font-semibold">Best Weapons Guide</h3>
+                            <p class="text-gray-400 text-sm">Top guns with stats and tips</p>
+                        </div>
+                    </a>
+                    <a href="/guides/raiding/"
+                        class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-5 border border-arcane-900/30">
+                        <div
+                            class="w-14 h-14 bg-purple-500/20 rounded-lg flex items-center justify-center text-2xl shrink-0">
+                            ⚡</div>
+                        <div>
+                            <h3 class="font-semibold">Complete Raid Guide</h3>
+                            <p class="text-gray-400 text-sm">Shieldbreaker to base destruction</p>
+                        </div>
+                    </a>
+                    <a href="/maps/"
+                        class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-5 border border-arcane-900/30">
+                        <div
+                            class="w-14 h-14 bg-green-500/20 rounded-lg flex items-center justify-center text-2xl shrink-0">
+                            🗺️</div>
+                        <div>
+                            <h3 class="font-semibold">All Maps & Callouts</h3>
+                            <p class="text-gray-400 text-sm">Loot spots and tactical positions</p>
+                        </div>
+                    </a>
+                    <a href="/patch-notes/"
+                        class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-5 border border-arcane-900/30">
+                        <div
+                            class="w-14 h-14 bg-blue-500/20 rounded-lg flex items-center justify-center text-2xl shrink-0">
+                            📋</div>
+                        <div>
+                            <h3 class="font-semibold">Latest Patch Notes</h3>
+                            <p class="text-gray-400 text-sm">All updates and Episode changes</p>
+                        </div>
+                    </a>
+                    <a href="/guides/pvp-tips/"
+                        class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-5 border border-arcane-900/30">
+                        <div
+                            class="w-14 h-14 bg-orange-500/20 rounded-lg flex items-center justify-center text-2xl shrink-0">
+                            🎯</div>
+                        <div>
+                            <h3 class="font-semibold">PvP Tips & Tricks</h3>
+                            <p class="text-gray-400 text-sm">Win more fights in the open field</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== COMPLIANCE & DISCLAIMER ========== -->
+        <section class="py-8 bg-dark-950 border-y border-arcane-900/30">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <p class="text-gray-500 text-sm">
+                    <strong class="text-gray-400">Disclaimer:</strong> Highguard.wiki is a fan-made resource and is
+                    <strong>not affiliated with Wildlight Entertainment</strong>.
+                    All game content, images, and trademarks are © 2026 Wildlight Entertainment Inc. All rights
+                    reserved.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== FAQ SECTION ========== -->
+        <section class="py-16 bg-dark-900">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">❓ Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            What is Highguard?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">Highguard is a free-to-play PvP raid shooter by Wildlight
+                            Entertainment where 3-player teams fight as Wardens—arcane gunslingers battling for control
+                            of a mythical continent.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            Is Highguard free to play?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">Yes, Highguard is completely free to play on Steam with all
+                            core content—including new Episodes with maps, Wardens, and weapons—available at no cost.
+                        </div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            What platforms is Highguard on?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">Highguard is currently available on PC via Steam, requiring
+                            Windows 10 or Windows 11.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            How many players per team?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">Highguard features 3v3 team-based gameplay with each team
+                            consisting of three Wardens.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            What are Wardens?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">Wardens are the playable characters in Highguard—arcane
+                            gunslingers with unique magical abilities designed for roles like raiding, stealth, defense,
+                            harvesting, and combat.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            How do raids work?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">Teams fight for the Shieldbreaker sword spawned during
+                            magical storms, carry it to enemy bases to lower shields, summon Siege Towers, then breach
+                            and destroy generators or the anchor stone to win.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            What is the Shieldbreaker?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">The Shieldbreaker is an ancient magical sword that forms
+                            during storms—essential for breaking enemy base shields to initiate raids.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            How often does Highguard update?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">Highguard releases new Episodes monthly with new maps,
+                            Wardens, weapons, mounts, raid tools, and modes—all completely free for players.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            What are the system requirements?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400"><strong>Minimum:</strong> Windows 10, Intel i5-6600K /
+                            Ryzen R5 1600, 8GB RAM, GTX 1060 / RX 580, 25GB SSD.<br><strong>Recommended:</strong>
+                            Windows 11, i5-9600K / Ryzen 5 3600, 12GB RAM, RTX 2080 / RX 6650 XT, NVMe SSD.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-5 font-medium">
+                            Is Highguard.wiki official?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-400">No, Highguard.wiki is a fan-made resource and is not
+                            affiliated with Wildlight Entertainment. All game content is © 2026 Wildlight Entertainment
+                            Inc.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark-950 border-t border-arcane-900/30 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold mb-4">Highguard.wiki</h4>
+                    <p class="text-gray-500 text-sm">Your ultimate fan-made resource for Highguard guides, tools, and
+                        updates.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-300">Guides</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="/guides/beginners/" class="hover:text-arcane-400 transition">Beginner's Guide</a>
+                        </li>
+                        <li><a href="/guides/raiding/" class="hover:text-arcane-400 transition">Raid Guide</a></li>
+                        <li><a href="/guides/strongholds/" class="hover:text-arcane-400 transition">Stronghold Guide</a>
+                        </li>
+                        <li><a href="/guides/pvp-tips/" class="hover:text-arcane-400 transition">PvP Tips</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-300">Database</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="/wardens/" class="hover:text-arcane-400 transition">All Wardens</a></li>
+                        <li><a href="/weapons/" class="hover:text-arcane-400 transition">All Weapons</a></li>
+                        <li><a href="/items/" class="hover:text-arcane-400 transition">Items & Gear</a></li>
+                        <li><a href="/maps/" class="hover:text-arcane-400 transition">Maps</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-300">Site</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="/about/" class="hover:text-arcane-400 transition">About</a></li>
+                        <li><a href="/contact/" class="hover:text-arcane-400 transition">Contact</a></li>
+                        <li><a href="/disclosure/" class="hover:text-arcane-400 transition">Disclosure</a></li>
+                        <li><a href="/privacy/" class="hover:text-arcane-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-arcane-900/30 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2026 Highguard.wiki — Fan-made resource. Not affiliated with Wildlight Entertainment.</p>
+                <p class="mt-2">Highguard and all related content © 2026 Wildlight Entertainment Inc. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
