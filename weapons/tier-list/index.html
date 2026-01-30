@@ -4,18 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highguard Weapons Guide & Tier List — Best Guns Ranked (2026)</title>
+    <title>Highguard Weapons Tier List & Stats Guide (2026) — All 13 Guns Ranked</title>
     <meta name="description"
-        content="Complete Highguard weapons guide with tier list. Find the best guns, arcane weapons, and gear for raids and PvP. Updated for Episode 1.">
+        content="Complete Highguard weapons guide with tier list, damage stats & DPS for all 13 guns. Find the best weapons for raids, PvP combat & base defense. Updated Jan 2026.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://highguard.wiki/weapons/tier-list/">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L4 7v10l8 5 8-5V7l-8-5z'/></svg>">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Highguard Weapons Guide — Best Guns (2026)">
-    <meta property="og:description" content="Find the best weapons in Highguard for raids, defense, and PvP.">
+    <meta property="og:title" content="Highguard Weapons Tier List & Stats (2026) — All 13 Guns Ranked">
+    <meta property="og:description"
+        content="Complete Highguard weapons guide with tier list, damage stats & DPS. Find the best guns for raids, PvP & defense.">
     <meta property="og:url" content="https://highguard.wiki/weapons/tier-list/">
+    <meta property="og:site_name" content="Highguard Wiki">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highguard Weapons Tier List (2026) — All Guns Ranked">
+    <meta name="twitter:description"
+        content="Find the best weapons in Highguard with complete stats, DPS, and tier rankings.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,7 +32,7 @@
                     colors: {
                         arcane: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 900: '#1e1b4b' },
                         dark: { 800: '#1e1e2e', 900: '#0f0f1a', 950: '#080810' },
-                        rarity: { common: '#9ca3af', uncommon: '#22c55e', rare: '#3b82f6', epic: '#a855f7', legendary: '#f59e0b' }
+                        tier: { s: '#fbbf24', a: '#a78bfa', b: '#60a5fa', c: '#6b7280' }
                     }
                 }
             }
@@ -40,13 +47,29 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
         }
+
+        .tier-s {
+            border-left-color: #fbbf24;
+        }
+
+        .tier-a {
+            border-left-color: #a78bfa;
+        }
+
+        .tier-b {
+            border-left-color: #60a5fa;
+        }
+
+        .tier-c {
+            border-left-color: #6b7280;
+        }
     </style>
 
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"Highguard Weapons Guide & Tier List","description":"Complete weapons guide for Highguard with tier list and recommendations.","author":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-01-30","dateModified":"2026-01-30"}
+    {"@context":"https://schema.org","@type":"Article","headline":"Highguard Weapons Tier List & Stats Guide (2026) — All 13 Guns Ranked","description":"Complete weapons guide for Highguard with tier list, damage stats, DPS calculations, and loadout recommendations.","author":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-01-30","dateModified":"2026-01-30"}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What weapons are in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Highguard features arcane guns and raid tools. Players collect weapons as loot across the map, with new weapons added in monthly Episode updates."}},{"@type":"Question","name":"How do I get better weapons?","acceptedAnswer":{"@type":"Answer","text":"Weapons are found as loot throughout the map. Explore, loot containers, and defeat enemies to find upgraded gear."}},{"@type":"Question","name":"Are there weapon rarities?","acceptedAnswer":{"@type":"Answer","text":"Highguard uses a loot-based progression system. Better weapons are found through exploration and looting."}}]}
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many weapons are in Highguard at launch?","acceptedAnswer":{"@type":"Answer","text":"Highguard launches with 13 weapons total: 10 combat weapons (3 Assault Rifles, 2 Shotguns, 2 SMGs, 1 Sniper, 1 Revolver, 1 Gatling Gun) plus 3 Raid Tools (Blast Hammer, Zipline Gun, Rocket Launcher)."}},{"@type":"Question","name":"What is the best weapon in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Vanguard is considered the most versatile and beginner-friendly weapon. Kraken dominates close-quarters combat. Big Rig has the highest raw damage output but is only found in Care Packages."}},{"@type":"Question","name":"How do weapon rarities work in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Weapons come in rarities from Common to Legendary. Higher rarity weapons have improved stats. You can find weapons in chests or purchase them with Vesper at shops."}},{"@type":"Question","name":"Which weapon has the highest DPS in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Paladin (automatic shotgun) has the highest theoretical DPS at 318, followed by Ranger sniper at 296 and Corsair SMG at 270."}}]}
     </script>
 </head>
 
@@ -87,29 +110,30 @@
         <!-- Header -->
         <header class="mb-8">
             <div class="flex items-center gap-2 text-sm text-gray-400 mb-3">
-                <span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs font-medium">WEAPONS</span>
+                <span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs font-medium">TIER LIST</span>
                 <span>•</span>
                 <span>Updated Jan 30, 2026</span>
                 <span>•</span>
                 <span>Episode 1</span>
             </div>
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Highguard Weapons Guide & Tier List — Best Guns Ranked
+                Highguard Weapons Tier List & Stats — All 13 Guns Ranked
             </h1>
             <p class="text-lg text-gray-300 mb-6">
-                Find the best weapons in Highguard for raids, PvP combat, and base defense. This guide covers weapon
-                types, how to acquire gear, and recommendations for different playstyles.
+                Complete Highguard weapons guide with <strong>tier rankings, damage stats, and DPS calculations</strong>
+                for all 10 combat weapons and 3 Raid Tools at launch. Based on hands-on playtest data from media
+                previews.
             </p>
 
-            <!-- Early Meta Warning -->
-            <div class="bg-yellow-900/30 border border-yellow-500/50 rounded-xl p-4 mb-6">
+            <!-- Data Source Notice -->
+            <div class="bg-arcane-900/30 border border-arcane-500/50 rounded-xl p-4 mb-6">
                 <div class="flex items-start gap-3">
-                    <span class="text-2xl">⚠️</span>
+                    <span class="text-2xl">📊</span>
                     <div>
-                        <h2 class="font-semibold text-yellow-400 mb-1">Early Game Notice</h2>
-                        <p class="text-sm text-yellow-200/80">Highguard launched January 26, 2026. This guide uses
-                            <strong>weapon category classifications</strong> based on official descriptions. Specific
-                            weapon stats and tier rankings will be added as community data becomes available.</p>
+                        <h2 class="font-semibold text-arcane-400 mb-1">Data Source</h2>
+                        <p class="text-sm text-gray-300">Weapon stats in this guide are based on <strong>invite-only
+                                media playtests</strong> conducted before launch. Values may change with future patches.
+                            Last verified: January 26, 2026 (Launch Build).</p>
                     </div>
                 </div>
             </div>
@@ -119,11 +143,14 @@
         <nav class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mb-10">
             <h2 class="text-lg font-semibold mb-4">📑 Contents</h2>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
-                <a href="#weapon-system" class="text-arcane-400 hover:text-arcane-300">Weapon System</a>
-                <a href="#weapon-types" class="text-arcane-400 hover:text-arcane-300">Weapon Types</a>
+                <a href="#tier-list" class="text-arcane-400 hover:text-arcane-300">Weapon Tier List</a>
+                <a href="#all-weapons" class="text-arcane-400 hover:text-arcane-300">All 13 Weapons</a>
+                <a href="#weapon-stats" class="text-arcane-400 hover:text-arcane-300">Complete Stats Table</a>
+                <a href="#dps-rankings" class="text-arcane-400 hover:text-arcane-300">DPS Rankings</a>
+                <a href="#raid-tools" class="text-arcane-400 hover:text-arcane-300">Raid Tools Guide</a>
+                <a href="#loadouts" class="text-arcane-400 hover:text-arcane-300">Recommended Loadouts</a>
                 <a href="#how-to-get" class="text-arcane-400 hover:text-arcane-300">How to Get Weapons</a>
-                <a href="#gear-types" class="text-arcane-400 hover:text-arcane-300">Other Gear Types</a>
-                <a href="#recommendations" class="text-arcane-400 hover:text-arcane-300">Recommendations</a>
+                <a href="#scopes" class="text-arcane-400 hover:text-arcane-300">Scope Options</a>
                 <a href="#faq" class="text-arcane-400 hover:text-arcane-300">FAQ</a>
             </div>
         </nav>
@@ -131,108 +158,526 @@
         <!-- Content -->
         <article class="space-y-12">
 
-            <!-- Weapon System -->
-            <section id="weapon-system">
+            <!-- Tier List -->
+            <section id="tier-list">
                 <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">1</span>
-                    Weapon System Overview
-                </h2>
-                <p class="text-gray-300 mb-4">
-                    In Highguard, weapons are a core part of the <strong>loot-based progression system</strong>. Unlike
-                    games with permanent unlocks, you gather weapons during each match through exploration and looting.
-                </p>
-                <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-5 mb-4">
-                    <h3 class="font-semibold text-white mb-3">Key Points</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><span class="text-arcane-400">▸</span> <strong>Loot-Based:</strong> Find weapons scattered
-                            across the map</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Arcane Guns:</strong> Magical firearms with
-                            unique properties</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Raid Tools:</strong> Specialized equipment
-                            for breaking into bases</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Gear Escalation:</strong> Better loot spawns
-                            as matches progress</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Monthly Updates:</strong> New weapons added
-                            with each Episode</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Weapon Types -->
-            <section id="weapon-types">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">2</span>
-                    Weapon Categories
+                    Weapon Tier List (Launch Meta)
                 </h2>
                 <p class="text-gray-300 mb-6">
-                    Based on official descriptions, Highguard features <strong>arcane guns</strong> and <strong>raid
-                        tools</strong>. Here's how weapon types typically function in raid shooters:
+                    Based on overall effectiveness, ease of use, and versatility across all match phases. Tier rankings
+                    combine damage output, handling, and real-world performance from playtest data.
                 </p>
 
-                <div class="grid gap-4">
-                    <!-- Arcane Guns -->
-                    <div class="bg-dark-800 border border-red-500/30 rounded-xl p-5">
+                <!-- Tier Cards -->
+                <div class="space-y-4">
+                    <!-- S Tier -->
+                    <div class="bg-dark-800 border-l-4 tier-s rounded-r-xl p-5">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-2xl">🔫
-                            </div>
+                            <span
+                                class="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center text-xl font-bold text-yellow-400">S</span>
                             <div>
-                                <h3 class="text-lg font-semibold text-red-400">Arcane Guns</h3>
-                                <p class="text-gray-400 text-sm">Primary combat weapons</p>
+                                <h3 class="text-lg font-semibold text-yellow-400">Meta-Defining</h3>
+                                <p class="text-gray-400 text-sm">Reliable picks across all modes and maps</p>
                             </div>
                         </div>
-                        <p class="text-gray-300 text-sm mb-3">
-                            Highguard's signature weapons—<strong>arcane guns</strong> combine traditional firearms with
-                            magical properties. Each Warden has access to different arcane guns suited to their
-                            playstyle.
-                        </p>
-                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
-                            <span class="text-gray-500">Use For:</span> PvP combat, defending bases, Shieldbreaker
-                            fights
+                        <div class="grid sm:grid-cols-3 gap-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Vanguard</p>
+                                <p class="text-xs text-gray-400">Assault Rifle • Best all-rounder</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Kraken</p>
+                                <p class="text-xs text-gray-400">Shotgun • CQB king</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Big Rig</p>
+                                <p class="text-xs text-gray-400">Gatling Gun • Suppression beast</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Raid Tools -->
+                    <!-- A Tier -->
+                    <div class="bg-dark-800 border-l-4 tier-a rounded-r-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center text-xl font-bold text-purple-400">A</span>
+                            <div>
+                                <h3 class="text-lg font-semibold text-purple-400">Strong Picks</h3>
+                                <p class="text-gray-400 text-sm">Powerful but with sharper trade-offs</p>
+                            </div>
+                        </div>
+                        <div class="grid sm:grid-cols-3 gap-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Paladin</p>
+                                <p class="text-xs text-gray-400">Auto Shotgun • Highest DPS</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Dynasty</p>
+                                <p class="text-xs text-gray-400">Assault Rifle • High damage</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Viper</p>
+                                <p class="text-xs text-gray-400">SMG • Close-range brawler</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B Tier -->
+                    <div class="bg-dark-800 border-l-4 tier-b rounded-r-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl font-bold text-blue-400">B</span>
+                            <div>
+                                <h3 class="text-lg font-semibold text-blue-400">Situational</h3>
+                                <p class="text-gray-400 text-sm">Niche picks or higher skill requirements</p>
+                            </div>
+                        </div>
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Ranger</p>
+                                <p class="text-xs text-gray-400">Sniper • Space control</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Saber Rifle</p>
+                                <p class="text-xs text-gray-400">Burst Rifle • High skill cap</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Corsair</p>
+                                <p class="text-xs text-gray-400">Burst SMG • Raid specialist</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-white">Longhorn</p>
+                                <p class="text-xs text-gray-400">Revolver • Precision play</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Weapons Overview -->
+            <section id="all-weapons">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">2</span>
+                    All 13 Weapons at Launch
+                </h2>
+                <p class="text-gray-300 mb-6">
+                    Highguard launches with <strong>10 combat weapons</strong> and <strong>3 Raid Tools</strong>. Each
+                    Warden can carry 2 combat weapons, 1 Raid Tool, and 1 melee weapon (Axe).
+                </p>
+
+                <div class="grid gap-4">
+                    <!-- Assault Rifles -->
+                    <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-lg">🎯</span> Assault Rifles (3)
+                        </h3>
+                        <div class="grid sm:grid-cols-3 gap-3 text-sm">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Vanguard</p>
+                                <p class="text-gray-400">36 rounds • 9 body / 14 head</p>
+                                <p class="text-xs text-gray-500">Most versatile, beginner-friendly</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Dynasty</p>
+                                <p class="text-gray-400">22 rounds • 14 body / 24 head</p>
+                                <p class="text-xs text-gray-500">AK-47 style, higher damage</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Saber Rifle</p>
+                                <p class="text-gray-400">21 rounds • 18 body / 27 head</p>
+                                <p class="text-xs text-gray-500">Burst-fire, high skill cap</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SMGs -->
+                    <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-lg">⚡</span> SMGs (2)
+                        </h3>
+                        <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Viper</p>
+                                <p class="text-gray-400">26 rounds • 10 body / 15 head</p>
+                                <p class="text-xs text-gray-500">Full-auto, controllable recoil</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Corsair</p>
+                                <p class="text-gray-400">24 rounds • 12 body / 18 head (burst)</p>
+                                <p class="text-xs text-gray-500">Triple-burst, high DPS, heavy recoil</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shotguns -->
+                    <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-lg">💥</span> Shotguns (2)
+                        </h3>
+                        <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Kraken</p>
+                                <p class="text-gray-400">4 shells • 10×10 pellets body / 15 head</p>
+                                <p class="text-xs text-gray-500">Pump-action, devastating CQB</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Paladin</p>
+                                <p class="text-gray-400">14 shells • 7×5 pellets body / 10 head</p>
+                                <p class="text-xs text-gray-500">Full-auto shotgun, highest DPS</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Weapons -->
+                    <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-lg">🔥</span> Special Weapons (3)
+                        </h3>
+                        <div class="grid sm:grid-cols-3 gap-3 text-sm">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Ranger</p>
+                                <p class="text-gray-400">4 rounds • 85 body / 148 head</p>
+                                <p class="text-xs text-gray-500">Sniper rifle, no one-shot kills</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <p class="font-medium text-arcane-400">Longhorn</p>
+                                <p class="text-gray-400">5 rounds • 65 body / 97 head</p>
+                                <p class="text-xs text-gray-500">Revolver, precision hand cannon</p>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3 border border-yellow-500/30">
+                                <p class="font-medium text-yellow-400">Big Rig ⭐</p>
+                                <p class="text-gray-400">60 rounds • 30 body / 37 head</p>
+                                <p class="text-xs text-yellow-500/80">Care Package only</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Complete Stats Table -->
+            <section id="weapon-stats">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">3</span>
+                    Complete Weapon Stats
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Full damage, reload, and fire rate data for all combat weapons. Stats based on Common rarity
+                    baseline.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <div class="bg-dark-800 border border-arcane-900/30 rounded-xl overflow-hidden">
+                        <table class="w-full text-sm">
+                            <thead class="bg-dark-900">
+                                <tr>
+                                    <th class="px-3 py-3 text-left text-gray-400 font-medium">Weapon</th>
+                                    <th class="px-3 py-3 text-left text-gray-400 font-medium">Type</th>
+                                    <th class="px-3 py-3 text-center text-gray-400 font-medium">Clip</th>
+                                    <th class="px-3 py-3 text-center text-gray-400 font-medium">Body</th>
+                                    <th class="px-3 py-3 text-center text-gray-400 font-medium">Head</th>
+                                    <th class="px-3 py-3 text-center text-gray-400 font-medium">Reload</th>
+                                    <th class="px-3 py-3 text-center text-gray-400 font-medium">Fire Rate</th>
+                                    <th class="px-3 py-3 text-center text-gray-400 font-medium">Max DPS</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-arcane-900/30">
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Vanguard</td>
+                                    <td class="px-3 py-3 text-gray-400">Assault Rifle</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">36</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">9</td>
+                                    <td class="px-3 py-3 text-center text-green-400">14</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">2.0s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">13.3/s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">187</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Dynasty</td>
+                                    <td class="px-3 py-3 text-gray-400">Assault Rifle</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">22</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">14</td>
+                                    <td class="px-3 py-3 text-center text-green-400">24</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">2.2s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">10.0/s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">240</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Saber Rifle</td>
+                                    <td class="px-3 py-3 text-gray-400">Assault Rifle</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">21</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">18</td>
+                                    <td class="px-3 py-3 text-center text-green-400">27</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">2.0s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">7.2/s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">196</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Viper</td>
+                                    <td class="px-3 py-3 text-gray-400">SMG</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">26</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">10</td>
+                                    <td class="px-3 py-3 text-center text-green-400">15</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">1.7s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">16.3/s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">244</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Corsair</td>
+                                    <td class="px-3 py-3 text-gray-400">SMG (Burst)</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">24</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">12×6</td>
+                                    <td class="px-3 py-3 text-center text-green-400">18×6</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">2.2s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">15.0/s</td>
+                                    <td class="px-3 py-3 text-center text-yellow-400">270</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Kraken</td>
+                                    <td class="px-3 py-3 text-gray-400">Shotgun</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">4</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">10×10</td>
+                                    <td class="px-3 py-3 text-center text-green-400">15×10</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">1.8-4.2s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">1.6/s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">208</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Paladin</td>
+                                    <td class="px-3 py-3 text-gray-400">Auto Shotgun</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">14</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">7×5</td>
+                                    <td class="px-3 py-3 text-center text-green-400">10×5</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">1.7s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">6.4/s</td>
+                                    <td class="px-3 py-3 text-center text-yellow-400 font-bold">318</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Ranger</td>
+                                    <td class="px-3 py-3 text-gray-400">Sniper</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">4</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">85</td>
+                                    <td class="px-3 py-3 text-center text-green-400">148</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">3.2s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">2.0/s</td>
+                                    <td class="px-3 py-3 text-center text-yellow-400">296</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30">
+                                    <td class="px-3 py-3 text-white font-medium">Longhorn</td>
+                                    <td class="px-3 py-3 text-gray-400">Revolver</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">5</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">65</td>
+                                    <td class="px-3 py-3 text-center text-green-400">97</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">2.4s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">1.4/s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">131</td>
+                                </tr>
+                                <tr class="hover:bg-dark-900/30 bg-yellow-500/5">
+                                    <td class="px-3 py-3 text-yellow-400 font-medium">Big Rig ⭐</td>
+                                    <td class="px-3 py-3 text-gray-400">Gatling Gun</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">60</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">30</td>
+                                    <td class="px-3 py-3 text-center text-green-400">37</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">4.0s</td>
+                                    <td class="px-3 py-3 text-center text-gray-300">6.7/s</td>
+                                    <td class="px-3 py-3 text-center text-yellow-400">247</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">⭐ Big Rig only drops from Care Packages during the second Gear Up
+                    phase</p>
+            </section>
+
+            <!-- DPS Rankings -->
+            <section id="dps-rankings">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">4</span>
+                    DPS Rankings
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Maximum theoretical DPS assumes all shots hit body. Actual combat effectiveness varies by range,
+                    accuracy, and target movement.
+                </p>
+
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-6 text-yellow-400 font-bold">1</span>
+                            <div class="flex-1 bg-yellow-500/20 rounded h-8 flex items-center px-3"
+                                style="width: 100%;">
+                                <span class="text-sm font-medium">Paladin</span>
+                                <span class="ml-auto text-yellow-400 font-bold">318 DPS</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-6 text-gray-400 font-bold">2</span>
+                            <div class="flex-1 bg-arcane-500/20 rounded h-8 flex items-center px-3" style="width: 93%;">
+                                <span class="text-sm font-medium">Ranger</span>
+                                <span class="ml-auto text-arcane-400 font-bold">296 DPS</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-6 text-gray-400 font-bold">3</span>
+                            <div class="flex-1 bg-arcane-500/20 rounded h-8 flex items-center px-3" style="width: 85%;">
+                                <span class="text-sm font-medium">Corsair</span>
+                                <span class="ml-auto text-arcane-400 font-bold">270 DPS</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-6 text-gray-400 font-bold">4</span>
+                            <div class="flex-1 bg-arcane-500/20 rounded h-8 flex items-center px-3" style="width: 78%;">
+                                <span class="text-sm font-medium">Big Rig</span>
+                                <span class="ml-auto text-arcane-400 font-bold">247 DPS</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-6 text-gray-400 font-bold">5</span>
+                            <div class="flex-1 bg-arcane-500/20 rounded h-8 flex items-center px-3" style="width: 77%;">
+                                <span class="text-sm font-medium">Viper</span>
+                                <span class="ml-auto text-arcane-400 font-bold">244 DPS</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-6 text-gray-400 font-bold">6</span>
+                            <div class="flex-1 bg-gray-500/20 rounded h-8 flex items-center px-3" style="width: 75%;">
+                                <span class="text-sm font-medium">Dynasty</span>
+                                <span class="ml-auto text-gray-400 font-bold">240 DPS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-4 text-sm mt-4">
+                    <strong class="text-arcane-400">💡 Note:</strong> High DPS doesn't always mean best weapon. Paladin
+                    requires point-blank range. Ranger's DPS assumes perfect headshots at long range. Consider effective
+                    range and ease of use.
+                </div>
+            </section>
+
+            <!-- Raid Tools -->
+            <section id="raid-tools">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">5</span>
+                    Raid Tools Guide
+                </h2>
+                <p class="text-gray-300 mb-6">
+                    Raid Tools are specialized equipment for base destruction and mobility. Each player carries one Raid
+                    Tool in addition to combat weapons.
+                </p>
+
+                <div class="grid gap-4">
                     <div class="bg-dark-800 border border-purple-500/30 rounded-xl p-5">
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-2xl">
-                                💣</div>
+                                🔨</div>
                             <div>
-                                <h3 class="text-lg font-semibold text-purple-400">Raid Tools</h3>
-                                <p class="text-gray-400 text-sm">Base destruction equipment</p>
+                                <h3 class="text-lg font-semibold text-purple-400">Blast Hammer</h3>
+                                <p class="text-gray-400 text-sm">Structure destruction specialist</p>
                             </div>
                         </div>
                         <p class="text-gray-300 text-sm mb-3">
-                            <strong>Raid tools</strong> are specialized equipment for breaking into enemy strongholds.
-                            These include explosives, breaching devices, and other siege-focused gear.
+                            Explosive sledgehammer dealing <strong>1000 damage to walls</strong>. Charge up to release a
+                            cone-shaped ground projectile. Minimal player damage but devastates fortifications.
                         </p>
                         <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
-                            <span class="text-gray-500">Use For:</span> Destroying walls, planting bombs, breaching
-                            defenses
+                            <span class="text-gray-500">Best For:</span> Rapid wall destruction, creating entry points
+                            during raids
                         </div>
                     </div>
 
-                    <!-- Expected Categories -->
-                    <div class="bg-dark-800/50 border border-gray-700/30 rounded-xl p-5">
-                        <h3 class="font-semibold text-gray-300 mb-3">📋 Expected Weapon Types (Pending Confirmation)
-                        </h3>
-                        <p class="text-gray-500 text-sm mb-3">Based on similar games, Highguard may include:</p>
-                        <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-400">
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gray-500 rounded-full"></span>
-                                Rifles / Assault Weapons</div>
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gray-500 rounded-full"></span>
-                                Shotguns / Close-Range</div>
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gray-500 rounded-full"></span>
-                                Snipers / Long-Range</div>
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gray-500 rounded-full"></span>
-                                Pistols / Sidearms</div>
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gray-500 rounded-full"></span>
-                                SMGs / Rapid-Fire</div>
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 bg-gray-500 rounded-full"></span>
-                                Heavy / Explosive</div>
+                    <div class="bg-dark-800 border border-blue-500/30 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🪝</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-blue-400">Zipline Gun</h3>
+                                <p class="text-gray-400 text-sm">Mobility and positioning tool</p>
+                            </div>
                         </div>
-                        <p class="text-xs text-gray-600 mt-3">⚠️ Categories will be confirmed as community tests weapons
-                            in-game.</p>
+                        <p class="text-gray-300 text-sm mb-3">
+                            Creates custom ziplines for vertical movement and flanking routes. Enables unexpected angles
+                            of attack and fast retreats.
+                        </p>
+                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
+                            <span class="text-gray-500">Best For:</span> Maps with elevation, flanking, setting up
+                            ambushes
+                        </div>
+                    </div>
+
+                    <div class="bg-dark-800 border border-red-500/30 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-2xl">🚀
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-red-400">Rocket Launcher</h3>
+                                <p class="text-gray-400 text-sm">Explosive demolition</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-3">
+                            Traditional explosive option. Destroys non-reinforced walls in one hit. Direct player hits
+                            deal <strong>125 damage</strong> (near one-shot territory).
+                        </p>
+                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
+                            <span class="text-gray-500">Best For:</span> Safe-distance wall destruction, emergency
+                            anti-personnel
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommended Loadouts -->
+            <section id="loadouts">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">6</span>
+                    Recommended Loadouts
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-dark-800 border border-green-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-green-400 mb-3">🎯 Beginner Friendly</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><span class="text-arcane-400">Primary:</span> Vanguard</li>
+                            <li><span class="text-arcane-400">Secondary:</span> Kraken or Paladin</li>
+                            <li><span class="text-arcane-400">Raid Tool:</span> Rocket Launcher</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-3">Balanced for all phases. Vanguard handles most fights,
+                            shotgun for base defense.</p>
+                    </div>
+
+                    <div class="bg-dark-800 border border-red-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-red-400 mb-3">⚔️ Aggressive Raider</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><span class="text-arcane-400">Primary:</span> Dynasty</li>
+                            <li><span class="text-arcane-400">Secondary:</span> Corsair</li>
+                            <li><span class="text-arcane-400">Raid Tool:</span> Blast Hammer</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-3">High damage output for breaching. Corsair melts structures
+                            during raids.</p>
+                    </div>
+
+                    <div class="bg-dark-800 border border-blue-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-blue-400 mb-3">🛡️ Base Defender</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><span class="text-arcane-400">Primary:</span> Vanguard</li>
+                            <li><span class="text-arcane-400">Secondary:</span> Big Rig (if available)</li>
+                            <li><span class="text-arcane-400">Raid Tool:</span> Zipline Gun</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-3">Hold chokepoints with Big Rig. Zipline enables quick
+                            repositioning.</p>
+                    </div>
+
+                    <div class="bg-dark-800 border border-purple-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-purple-400 mb-3">🎯 Long-Range Control</h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><span class="text-arcane-400">Primary:</span> Ranger</li>
+                            <li><span class="text-arcane-400">Secondary:</span> Viper</li>
+                            <li><span class="text-arcane-400">Raid Tool:</span> Zipline Gun</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-3">Control sightlines with Ranger. Viper for emergency close
+                            combat.</p>
                     </div>
                 </div>
             </section>
@@ -240,13 +685,9 @@
             <!-- How to Get Weapons -->
             <section id="how-to-get">
                 <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">3</span>
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">7</span>
                     How to Get Weapons
                 </h2>
-                <p class="text-gray-300 mb-4">
-                    Weapons in Highguard are obtained through the <strong>loot system</strong>. Here's how gear
-                    acquisition works:
-                </p>
 
                 <div class="bg-dark-800 border border-arcane-900/30 rounded-lg overflow-hidden mb-6">
                     <table class="w-full text-sm">
@@ -258,201 +699,203 @@
                         </thead>
                         <tbody class="divide-y divide-arcane-900/30">
                             <tr>
-                                <td class="px-4 py-3 text-arcane-400 font-medium">🗺️ Map Exploration</td>
-                                <td class="px-4 py-3 text-gray-300">Loot containers and points of interest across the
-                                    map</td>
+                                <td class="px-4 py-3 text-arcane-400 font-medium">🎮 Initial Gear Up</td>
+                                <td class="px-4 py-3 text-gray-300">Pick 2 combat weapons for free at match start</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-arcane-400 font-medium">🛒 Shop (Vesper)</td>
+                                <td class="px-4 py-3 text-gray-300">Purchase weapons and upgrades with Vesper currency
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-arcane-400 font-medium">📦 Chests</td>
+                                <td class="px-4 py-3 text-gray-300">Find weapons in loot chests across the map</td>
                             </tr>
                             <tr>
                                 <td class="px-4 py-3 text-arcane-400 font-medium">💀 Enemy Drops</td>
-                                <td class="px-4 py-3 text-gray-300">Defeated players drop their equipped gear</td>
+                                <td class="px-4 py-3 text-gray-300">Pick up weapons from defeated players</td>
                             </tr>
                             <tr>
-                                <td class="px-4 py-3 text-arcane-400 font-medium">🏰 Stronghold Caches</td>
-                                <td class="px-4 py-3 text-gray-300">Your base may contain starting equipment</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3 text-arcane-400 font-medium">⏱️ Escalation</td>
-                                <td class="px-4 py-3 text-gray-300">Better loot appears as matches progress</td>
+                                <td class="px-4 py-3 text-yellow-400 font-medium">📦 Care Packages</td>
+                                <td class="px-4 py-3 text-gray-300">Big Rig only spawns in Care Packages (2nd Gear Up
+                                    phase)</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-4 text-sm">
-                    <strong class="text-arcane-400">💡 Tip:</strong> Prioritize looting early in the match. Better gear
-                    gives you an advantage in Shieldbreaker fights and raids.
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
+                    <h3 class="font-semibold text-white mb-3">💎 Weapon Rarities</h3>
+                    <p class="text-gray-300 text-sm mb-3">Weapons come in multiple rarities from <strong>Common to
+                            Legendary</strong>. Higher rarity = better stats.</p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-500/20 text-gray-400 px-2 py-1 rounded">Common</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded">Uncommon</span>
+                        <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Rare</span>
+                        <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">Epic</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded">Legendary</span>
+                    </div>
                 </div>
             </section>
 
-            <!-- Other Gear -->
-            <section id="gear-types">
+            <!-- Scope Options -->
+            <section id="scopes">
                 <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">4</span>
-                    Other Gear Types
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">8</span>
+                    Scope Options
                 </h2>
-                <p class="text-gray-300 mb-6">
-                    Beyond weapons, Highguard features several other equipment categories:
+                <p class="text-gray-300 mb-4">
+                    Unlike other shooters, Highguard provides built-in scope options—no attachments needed.
                 </p>
 
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <div class="bg-dark-800 border border-blue-500/30 rounded-xl p-5">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl">
-                                🛡️</div>
-                            <h3 class="font-semibold text-blue-400">Armor</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">Protective gear that reduces damage taken. Found as loot
-                            throughout matches.</p>
-                    </div>
-
-                    <div class="bg-dark-800 border border-purple-500/30 rounded-xl p-5">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center text-xl">
-                                🔮</div>
-                            <h3 class="font-semibold text-purple-400">Amulets</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">Magical accessories imbued with perks. Provide various gameplay
-                            bonuses.</p>
-                    </div>
-
-                    <div class="bg-dark-800 border border-green-500/30 rounded-xl p-5">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center text-xl">
-                                🐎</div>
-                            <h3 class="font-semibold text-green-400">Saddles</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">Mount equipment that affects riding speed and abilities.</p>
-                    </div>
-
-                    <div class="bg-dark-800 border border-orange-500/30 rounded-xl p-5">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center text-xl">
-                                🎒</div>
-                            <h3 class="font-semibold text-orange-400">Mounts</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">Rideable creatures for traversing the large open maps quickly.
-                        </p>
-                    </div>
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-xl overflow-hidden">
+                    <table class="w-full text-sm">
+                        <thead class="bg-dark-900">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-gray-400 font-medium">Weapon</th>
+                                <th class="px-4 py-3 text-center text-gray-400 font-medium">Default</th>
+                                <th class="px-4 py-3 text-center text-gray-400 font-medium">Alternate</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-arcane-900/30">
+                            <tr>
+                                <td class="px-4 py-3 text-white">Ranger</td>
+                                <td class="px-4 py-3 text-center text-gray-300">3× Scope</td>
+                                <td class="px-4 py-3 text-center text-arcane-400">6× Scope</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-white">Saber Rifle</td>
+                                <td class="px-4 py-3 text-center text-gray-300">3× Scope</td>
+                                <td class="px-4 py-3 text-center text-arcane-400">Ironsight</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-white">Vanguard / Dynasty</td>
+                                <td class="px-4 py-3 text-center text-gray-300">Ironsight</td>
+                                <td class="px-4 py-3 text-center text-arcane-400">3× Scope</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-white">Viper / Longhorn</td>
+                                <td class="px-4 py-3 text-center text-gray-300">Ironsight</td>
+                                <td class="px-4 py-3 text-center text-arcane-400">2× Scope</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-white">Kraken / Paladin / Corsair / Big Rig</td>
+                                <td class="px-4 py-3 text-center text-gray-300">Ironsight only</td>
+                                <td class="px-4 py-3 text-center text-gray-500">—</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
-            <!-- Recommendations -->
-            <section id="recommendations">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">5</span>
-                    Weapon Recommendations by Role
-                </h2>
-                <p class="text-gray-300 mb-6">
-                    While specific weapon tier rankings aren't available yet, here are general recommendations based on
-                    Warden roles:
-                </p>
-
-                <div class="space-y-4">
-                    <div class="bg-dark-800 border-l-4 border-red-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">⚔️ Raid Combat Wardens</h3>
-                        <p class="text-gray-400 text-sm">Prioritize high-damage weapons for breaking generators.
-                            Explosives and heavy guns recommended.</p>
+            <!-- Grenades -->
+            <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
+                <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                    <span class="text-lg">💣</span> Grenades
+                </h3>
+                <p class="text-gray-300 text-sm mb-3">All Wardens have unlimited grenades with a <strong>45-second
+                        cooldown</strong>.</p>
+                <div class="grid sm:grid-cols-3 gap-3 text-sm">
+                    <div class="bg-dark-900/50 rounded-lg p-3 text-center">
+                        <p class="text-2xl font-bold text-arcane-400">100</p>
+                        <p class="text-xs text-gray-500">Max Damage</p>
                     </div>
-                    <div class="bg-dark-800 border-l-4 border-purple-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">🗡️ Siege Stealth Wardens</h3>
-                        <p class="text-gray-400 text-sm">Silent or suppressed weapons work best. Quick-draw sidearms for
-                            ambush situations.</p>
+                    <div class="bg-dark-900/50 rounded-lg p-3 text-center">
+                        <p class="text-2xl font-bold text-arcane-400">3s</p>
+                        <p class="text-xs text-gray-500">Fuse Time</p>
                     </div>
-                    <div class="bg-dark-800 border-l-4 border-blue-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">🛡️ Base Defense Wardens</h3>
-                        <p class="text-gray-400 text-sm">Versatile mid-range weapons for holding positions. Area denial
-                            tools when available.</p>
+                    <div class="bg-dark-900/50 rounded-lg p-3 text-center">
+                        <p class="text-2xl font-bold text-arcane-400">45s</p>
+                        <p class="text-xs text-gray-500">Cooldown</p>
                     </div>
-                    <div class="bg-dark-800 border-l-4 border-orange-500 rounded-r-lg p-4">
-                        <h3 class="font-semibold text-white mb-1">🎯 Open-World Combat Wardens</h3>
-                        <p class="text-gray-400 text-sm">Long-range rifles for field fights. Balanced loadouts for
-                            various engagement distances.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Community Database -->
-            <section
-                class="bg-gradient-to-br from-arcane-900/40 to-dark-800 border border-arcane-500/30 rounded-xl p-6">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="text-3xl">📊</span>
-                    <div>
-                        <h2 class="text-xl font-bold">Weapons Database (Coming Soon)</h2>
-                        <p class="text-gray-400 text-sm">Full weapon stats, DPS comparisons, and tier rankings</p>
-                    </div>
-                </div>
-                <p class="text-gray-300 text-sm mb-4">
-                    We're building a comprehensive weapons database with sortable stats, damage calculations, and
-                    community tier voting. Join our Discord to contribute data!
-                </p>
-                <div class="flex flex-wrap gap-3">
-                    <a href="/tools/damage-calculator/"
-                        class="inline-flex items-center gap-2 bg-dark-900/60 hover:bg-dark-900 border border-arcane-500/30 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
-                        📈 Damage Calculator
-                    </a>
-                    <a href="/weapons/compare/"
-                        class="inline-flex items-center gap-2 bg-dark-900/60 hover:bg-dark-900 border border-arcane-500/30 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
-                        ⚖️ Weapon Compare Tool
-                    </a>
                 </div>
             </section>
 
             <!-- FAQ -->
             <section id="faq">
                 <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">6</span>
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">9</span>
                     Frequently Asked Questions
                 </h2>
 
                 <div class="space-y-3">
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
-                            What weapons are in Highguard?
+                            How many weapons are in Highguard at launch?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">Highguard features arcane guns and raid tools. Players
-                            collect weapons as loot across the map, with new weapons added in monthly Episode updates.
-                        </div>
+                        <div class="px-4 pb-4 text-gray-400">Highguard launches with 13 weapons total: 10 combat weapons
+                            (3 Assault Rifles, 2 Shotguns, 2 SMGs, 1 Sniper, 1 Revolver, 1 Gatling Gun) plus 3 Raid
+                            Tools (Blast Hammer, Zipline Gun, Rocket Launcher).</div>
                     </details>
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
-                            How do I get better weapons?
+                            What is the best weapon in Highguard?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">Explore the map, loot containers, and defeat enemies to
-                            find upgraded gear. Better weapons spawn as matches progress.</div>
+                        <div class="px-4 pb-4 text-gray-400">Vanguard is the most versatile and beginner-friendly
+                            assault rifle. Kraken dominates close-quarters combat. Paladin has the highest raw DPS. Big
+                            Rig excels at suppression but only spawns in Care Packages.</div>
                     </details>
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
-                            Do weapons have rarities?
+                            Can any weapon one-shot kill?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">Highguard uses a loot-based system. The exact rarity
-                            structure is still being documented by the community.</div>
+                        <div class="px-4 pb-4 text-gray-400">No weapon can reliably one-shot full-health players. Ranger
+                            sniper headshots deal 148 damage—high but not a one-shot. Kraken shotgun can deal 150 damage
+                            at point-blank with all pellets hitting, but this requires perfect aim.</div>
                     </details>
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
-                            When will weapon stats be added?
+                            How do I get the Big Rig Gatling Gun?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">We're actively collecting weapon data from the community.
-                            Stats will be added as they're verified through gameplay testing.</div>
+                        <div class="px-4 pb-4 text-gray-400">Big Rig only spawns in Care Package Drops, which begin
+                            appearing during the second Gear Up phase. It cannot be purchased from shops or found in
+                            regular chests.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            What is Vesper and how do I get it?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Vesper is the in-match currency used at shops to buy
+                            weapons, armor, and upgrades. You earn Vesper by mining resource nodes with your melee
+                            weapon (Axe) or by defeating enemy players.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            Will more weapons be added?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Yes. Wildlight Entertainment has confirmed monthly Episode
+                            updates that include new weapons, Wardens, maps, and game modes. New content is free for all
+                            players.</div>
                     </details>
                 </div>
             </section>
@@ -487,12 +930,12 @@
                         <p class="text-gray-400 text-sm">Master raid mechanics</p>
                     </div>
                 </a>
-                <a href="/items/armor/"
+                <a href="/tools/damage-calculator/"
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl">🛡️</div>
+                    <div class="w-12 h-12 bg-arcane-500/20 rounded-lg flex items-center justify-center text-xl">📊</div>
                     <div>
-                        <h3 class="font-semibold">Armor Guide</h3>
-                        <p class="text-gray-400 text-sm">Defensive gear stats</p>
+                        <h3 class="font-semibold">Damage Calculator</h3>
+                        <p class="text-gray-400 text-sm">Compare weapon DPS</p>
                     </div>
                 </a>
             </div>
@@ -500,12 +943,14 @@
 
         <!-- Version -->
         <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mt-10">
-            <h3 class="font-semibold text-gray-300 mb-3">📋 Version & Disclaimer</h3>
+            <h3 class="font-semibold text-gray-300 mb-3">📋 Version & Sources</h3>
             <ul class="text-sm text-gray-500 space-y-1">
-                <li><strong>Game Version:</strong> Episode 1 (Launch, Jan 26, 2026)</li>
+                <li><strong>Game Version:</strong> Episode 1 (Launch Build, Jan 26, 2026)</li>
                 <li><strong>Last Updated:</strong> January 30, 2026</li>
-                <li><strong>Data Sources:</strong> Steam Official Store Page</li>
-                <li><strong>Note:</strong> Weapon stats and names will be added as data is verified.</li>
+                <li><strong>Data Sources:</strong> esports.gg playtest (Jan 21, 2026), AllThings.How, IntoIndieGames,
+                    Shacknews preview</li>
+                <li><strong>Note:</strong> Stats reflect Common rarity baseline. Higher rarities have improved values.
+                    Balance changes may occur with future patches.</li>
             </ul>
             <p class="text-xs text-gray-600 mt-3">Highguard.wiki is a fan-made resource. All game content © 2026
                 Wildlight Entertainment Inc.</p>
