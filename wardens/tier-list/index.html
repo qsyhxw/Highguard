@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highguard Warden Tier List — Best Characters Ranked (January 2026)</title>
     <meta name="description"
-        content="Highguard Warden tier list and rankings. Find the best Wardens for raids, defense, and PvP. Updated for Episode 1 with role-based recommendations.">
+        content="Complete Highguard Warden tier list with all 8 characters ranked. Find the best Wardens for raids, defense, and PvP with detailed abilities, counters, and team compositions.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://highguard.wiki/wardens/tier-list/">
     <link rel="icon" type="image/svg+xml"
@@ -14,8 +14,17 @@
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Highguard Warden Tier List — Best Characters (2026)">
-    <meta property="og:description" content="Find the best Wardens for raids, defense, and PvP in Highguard.">
+    <meta property="og:description"
+        content="Find the best Wardens in Highguard for raids, defense, and PvP. All 8 characters ranked with abilities and counters.">
     <meta property="og:url" content="https://highguard.wiki/wardens/tier-list/">
+    <meta property="og:site_name" content="Highguard Wiki">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,15 +32,31 @@
             theme: {
                 extend: {
                     colors: {
-                        arcane: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 900: '#1e1b4b' },
+                        arcane: { 50: '#f0f4ff', 100: '#e0e7ff', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#1e1b4b' },
                         dark: { 800: '#1e1e2e', 900: '#0f0f1a', 950: '#080810' },
-                        tier: { s: '#fbbf24', a: '#a78bfa', b: '#60a5fa', c: '#6b7280' }
+                        tier: { s: '#fbbf24', a: '#a78bfa', b: '#60a5fa', c: '#6b7280' },
+                        class: { assault: '#ef4444', defensive: '#3b82f6', destruction: '#f97316', recon: '#22c55e', support: '#a855f7' }
+                    },
+                    fontFamily: {
+                        display: ['Rajdhani', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
         .card-hover {
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -41,29 +66,40 @@
             box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
         }
 
-        .role-card {
+        .tier-badge {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+        }
+
+        .warden-card {
             transition: all 0.2s;
         }
 
-        .role-card:hover {
+        .warden-card:hover {
             background: rgba(99, 102, 241, 0.1);
+        }
+
+        .ability-tag {
+            font-size: 0.65rem;
+            padding: 2px 6px;
         }
     </style>
 
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"Highguard Warden Tier List — Best Characters Ranked","description":"Complete Warden tier list for Highguard with role-based recommendations.","author":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-01-30","dateModified":"2026-01-30"}
+    {"@context":"https://schema.org","@type":"Article","headline":"Highguard Warden Tier List — Best Characters Ranked","description":"Complete tier list for all 8 Highguard Wardens with abilities, counters, and team compositions.","author":{"@type":"Organization","name":"Highguard Wiki"},"publisher":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-01-30","dateModified":"2026-01-30"}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Wardens in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Wardens are the playable characters in Highguard—arcane gunslingers with unique magical abilities for raiding, defense, and combat."}},{"@type":"Question","name":"How many Wardens are in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Highguard features an ever-growing roster of Wardens, with new characters added in monthly Episode updates."}},{"@type":"Question","name":"What Warden roles exist?","acceptedAnswer":{"@type":"Answer","text":"Wardens are designed for different tasks: Raid Combat, Siege Stealth, Base Defense, Harvesting, and Open-World Combat."}},{"@type":"Question","name":"Will this tier list be updated?","acceptedAnswer":{"@type":"Answer","text":"Yes, we update this tier list with each Episode release and major balance patch."}}]}
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Wardens in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Wardens are the 8 playable characters in Highguard. Each Warden is an arcane gunslinger with a Passive, Tactical, and Ultimate ability, belonging to one of 5 classes: Assault, Defensive, Destruction, Recon, or Support."}},{"@type":"Question","name":"Who is the best Warden in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Based on early meta consensus, Scarlet and Atticus are considered S-Tier Wardens due to their versatility and high impact in both raids and combat."}},{"@type":"Question","name":"How many Wardens are in Highguard at launch?","acceptedAnswer":{"@type":"Answer","text":"Highguard launched with 8 playable Wardens: Atticus, Condor, Kai, Mara, Redmane, Scarlet, Slade, and Una. More Wardens will be added in future Episode updates."}},{"@type":"Question","name":"What are the 5 Warden classes?","acceptedAnswer":{"@type":"Answer","text":"The 5 Warden classes are: Assault (aggressive combat), Defensive (protection and repairs), Destruction (breaking structures), Recon (scouting and intel), and Support (healing and team buffs)."}},{"@type":"Question","name":"Are all Wardens free in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Yes, all Wardens in Highguard are completely free. Unlike some hero shooters, you do not need to unlock or purchase characters."}}]}
     </script>
 </head>
 
-<body class="bg-dark-950 text-gray-100 font-sans antialiased">
+<body class="bg-dark-950 text-gray-100 font-body antialiased">
 
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-arcane-900/50">
         <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2 text-xl font-bold text-white">
+            <a href="/" class="flex items-center gap-2 text-xl font-bold text-white font-display">
                 <svg class="w-8 h-8 text-arcane-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5L18 8v8l-6 3.75L6 16V8l6-3.5z" />
                 </svg>
@@ -80,7 +116,7 @@
         </nav>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-8">
+    <main class="max-w-6xl mx-auto px-4 py-8">
         <!-- Breadcrumb -->
         <nav class="text-sm text-gray-500 mb-6">
             <ol class="flex items-center gap-2">
@@ -99,43 +135,43 @@
                 <span>•</span>
                 <span>Updated Jan 30, 2026</span>
                 <span>•</span>
-                <span>Episode 1</span>
+                <span>Episode 1 Meta</span>
             </div>
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Highguard Warden Tier List — Best Characters Ranked
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+                Highguard Warden Tier List — All 8 Characters Ranked
             </h1>
             <p class="text-lg text-gray-300 mb-6">
-                Find the best Wardens in Highguard for raids, base defense, and PvP combat. Our tier list is organized
-                by <strong>role type</strong> to help you build effective team compositions.
+                Complete tier list for all <strong>8 Wardens</strong> in Highguard with detailed abilities, counters,
+                synergies, and team compositions. Rankings based on community consensus from multiple sources.
             </p>
 
-            <!-- Early Meta Warning -->
+            <!-- Meta Notice -->
             <div class="bg-yellow-900/30 border border-yellow-500/50 rounded-xl p-4 mb-6">
                 <div class="flex items-start gap-3">
                     <span class="text-2xl">⚠️</span>
                     <div>
-                        <h2 class="font-semibold text-yellow-400 mb-1">Early Meta Notice</h2>
-                        <p class="text-sm text-yellow-200/80">Highguard launched on January 26, 2026—just 4 days ago.
-                            The competitive meta is still evolving. This tier list uses <strong>role-based
-                                classification</strong> rather than traditional S/A/B/C rankings until more community
-                            data is available.</p>
+                        <h2 class="font-semibold text-yellow-400 mb-1 font-display">Early Meta Notice</h2>
+                        <p class="text-sm text-yellow-200/80">Highguard launched on <strong>January 26,
+                                2026</strong>—just 4 days ago. Rankings are based on early community testing from
+                            Dexerto, Beebom, and other gaming media. The meta will evolve as players discover new
+                            strategies.</p>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Quick Navigation -->
+        <!-- Quick Nav -->
         <nav class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mb-10">
-            <h2 class="text-lg font-semibold mb-4">📑 Jump To</h2>
+            <h2 class="text-lg font-semibold mb-4 font-display">📑 Table of Contents</h2>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
-                <a href="#what-are-wardens" class="text-arcane-400 hover:text-arcane-300">What Are Wardens?</a>
-                <a href="#role-types" class="text-arcane-400 hover:text-arcane-300">Warden Role Types</a>
-                <a href="#raid-combat" class="text-arcane-400 hover:text-arcane-300">Raid Combat</a>
-                <a href="#siege-stealth" class="text-arcane-400 hover:text-arcane-300">Siege Stealth</a>
-                <a href="#base-defense" class="text-arcane-400 hover:text-arcane-300">Base Defense</a>
-                <a href="#harvesting" class="text-arcane-400 hover:text-arcane-300">Harvesting</a>
-                <a href="#open-world" class="text-arcane-400 hover:text-arcane-300">Open-World Combat</a>
+                <a href="#tier-list" class="text-arcane-400 hover:text-arcane-300">Tier List Overview</a>
+                <a href="#s-tier" class="text-arcane-400 hover:text-arcane-300">S-Tier Wardens</a>
+                <a href="#a-tier" class="text-arcane-400 hover:text-arcane-300">A-Tier Wardens</a>
+                <a href="#b-tier" class="text-arcane-400 hover:text-arcane-300">B-Tier Wardens</a>
+                <a href="#c-tier" class="text-arcane-400 hover:text-arcane-300">C-Tier Wardens</a>
+                <a href="#classes" class="text-arcane-400 hover:text-arcane-300">Warden Classes</a>
                 <a href="#team-comps" class="text-arcane-400 hover:text-arcane-300">Team Compositions</a>
+                <a href="#counters" class="text-arcane-400 hover:text-arcane-300">Counter Chart</a>
                 <a href="#faq" class="text-arcane-400 hover:text-arcane-300">FAQ</a>
             </div>
         </nav>
@@ -143,280 +179,1050 @@
         <!-- Content -->
         <article class="space-y-12">
 
-            <!-- What Are Wardens -->
-            <section id="what-are-wardens">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+            <!-- Tier List Overview -->
+            <section id="tier-list">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
                     <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">1</span>
-                    What Are Wardens?
+                    Warden Tier List Overview
                 </h2>
-                <p class="text-gray-300 mb-4">
-                    <strong>Wardens</strong> are the playable characters in Highguard. Each Warden is an <strong>arcane
-                        gunslinger</strong>—a magical warrior wielding both firearms and supernatural abilities.
-                </p>
-                <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-5 mb-4">
-                    <h3 class="font-semibold text-white mb-3">Every Warden Has:</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><span class="text-arcane-400">▸</span> <strong>Unique Arcane Abilities:</strong> Magical
-                            skills for combat, utility, or support</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Arcane Guns:</strong> Signature weapons with
-                            special properties</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Raid Tools:</strong> Equipment for breaching,
-                            destroying, or defending bases</li>
-                        <li><span class="text-arcane-400">▸</span> <strong>Role Specialization:</strong> Abilities
-                            designed for specific tasks</li>
-                    </ul>
+
+                <!-- Tier Explanation -->
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mb-6">
+                    <h3 class="font-semibold text-white mb-3 font-display">Tier Definitions</h3>
+                    <div class="grid sm:grid-cols-2 gap-3 text-sm">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="tier-badge w-8 h-8 bg-tier-s/20 text-tier-s rounded flex items-center justify-center">S</span>
+                            <span class="text-gray-300">Best overall, excels in any team or situation</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="tier-badge w-8 h-8 bg-tier-a/20 text-tier-a rounded flex items-center justify-center">A</span>
+                            <span class="text-gray-300">Strong and reliable, not fully meta-defining</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="tier-badge w-8 h-8 bg-tier-b/20 text-tier-b rounded flex items-center justify-center">B</span>
+                            <span class="text-gray-300">Situational, requires specific setups to shine</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="tier-badge w-8 h-8 bg-tier-c/20 text-tier-c rounded flex items-center justify-center">C</span>
+                            <span class="text-gray-300">Niche picks, outclassed by other options</span>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-gray-400 text-sm">
-                    Highguard features an <strong>ever-growing roster</strong> of Wardens. New characters are added with
-                    each monthly Episode update—all free for players.
-                </p>
+
+                <!-- Visual Tier List -->
+                <div class="space-y-3">
+                    <!-- S-Tier -->
+                    <div class="bg-dark-800 border-l-4 border-tier-s rounded-r-xl p-4">
+                        <div class="flex items-center gap-4 flex-wrap">
+                            <span class="tier-badge text-2xl text-tier-s w-12">S</span>
+                            <div class="flex gap-3 flex-wrap">
+                                <a href="#scarlet"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">🌪️</span>
+                                    <span class="font-medium">Scarlet</span>
+                                    <span
+                                        class="ability-tag bg-class-assault/20 text-class-assault rounded">Assault</span>
+                                </a>
+                                <a href="#atticus"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">⚡</span>
+                                    <span class="font-medium">Atticus</span>
+                                    <span
+                                        class="ability-tag bg-class-assault/20 text-class-assault rounded">Assault</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- A-Tier -->
+                    <div class="bg-dark-800 border-l-4 border-tier-a rounded-r-xl p-4">
+                        <div class="flex items-center gap-4 flex-wrap">
+                            <span class="tier-badge text-2xl text-tier-a w-12">A</span>
+                            <div class="flex gap-3 flex-wrap">
+                                <a href="#mara"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">👻</span>
+                                    <span class="font-medium">Mara</span>
+                                    <span
+                                        class="ability-tag bg-class-support/20 text-class-support rounded">Support</span>
+                                </a>
+                                <a href="#kai"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">❄️</span>
+                                    <span class="font-medium">Kai</span>
+                                    <span
+                                        class="ability-tag bg-class-defensive/20 text-class-defensive rounded">Defensive</span>
+                                </a>
+                                <a href="#redmane"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">🦁</span>
+                                    <span class="font-medium">Redmane</span>
+                                    <span
+                                        class="ability-tag bg-class-destruction/20 text-class-destruction rounded">Destruction</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B-Tier -->
+                    <div class="bg-dark-800 border-l-4 border-tier-b rounded-r-xl p-4">
+                        <div class="flex items-center gap-4 flex-wrap">
+                            <span class="tier-badge text-2xl text-tier-b w-12">B</span>
+                            <div class="flex gap-3 flex-wrap">
+                                <a href="#slade"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">🔥</span>
+                                    <span class="font-medium">Slade</span>
+                                    <span
+                                        class="ability-tag bg-class-assault/20 text-class-assault rounded">Assault</span>
+                                </a>
+                                <a href="#condor"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">🦅</span>
+                                    <span class="font-medium">Condor</span>
+                                    <span class="ability-tag bg-class-recon/20 text-class-recon rounded">Recon</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C-Tier -->
+                    <div class="bg-dark-800 border-l-4 border-tier-c rounded-r-xl p-4">
+                        <div class="flex items-center gap-4 flex-wrap">
+                            <span class="tier-badge text-2xl text-tier-c w-12">C</span>
+                            <div class="flex gap-3 flex-wrap">
+                                <a href="#una"
+                                    class="bg-dark-900 hover:bg-arcane-900/30 px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                                    <span class="text-xl">🌿</span>
+                                    <span class="font-medium">Una</span>
+                                    <span
+                                        class="ability-tag bg-class-defensive/20 text-class-defensive rounded">Defensive</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- Role Types Overview -->
-            <section id="role-types">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">2</span>
-                    Warden Role Types
+            <!-- S-Tier Wardens -->
+            <section id="s-tier">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span
+                        class="w-8 h-8 bg-tier-s rounded-lg flex items-center justify-center text-sm text-dark-900 tier-badge">S</span>
+                    S-Tier Wardens
                 </h2>
-                <p class="text-gray-300 mb-6">
-                    According to official descriptions, Wardens are designed for <strong>five distinct task
-                        types</strong>. Understanding these roles is key to building a balanced team.
-                </p>
+                <p class="text-gray-300 mb-6">These Wardens provide exceptional value in almost any situation. High
+                    versatility, strong abilities, and game-changing ultimates make them top picks.</p>
 
-                <div class="grid gap-4">
-                    <!-- Raid Combat -->
-                    <div id="raid-combat" class="role-card bg-dark-800 border border-red-500/30 rounded-xl p-5">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-2xl">⚔️
+                <!-- Scarlet -->
+                <div id="scarlet" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6 mb-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">🌪️</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Scarlet</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-assault/20 text-class-assault rounded text-xs font-medium">ASSAULT</span>
+                                        <span class="text-gray-400">• Desert Assassin</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-s/20 text-tier-s px-3 py-1 rounded">S-TIER</span>
                             </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-red-400">Raid Combat</h3>
-                                <p class="text-gray-400 text-sm">Breaching and destruction specialists</p>
+                            <p class="text-gray-300 mb-4">
+                                <em>"A trained assassin who wields wind and sand to outflank opponents and infiltrate
+                                    enemy bases."</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Scarlet is Highguard's premier flanker and assassin. Her <strong>Shifting Sands</strong>
+                                passive is arguably the most powerful utility in the game, allowing her to phase through
+                                destructible walls. Combined with stealth capabilities, she can infiltrate enemy bases
+                                undetected and plant bombs before defenders realize she's there.
+                            </p>
+
+                            <!-- Abilities -->
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Shifting Sands:</span>
+                                        <span class="text-gray-400 text-sm"> Shift a destructible wall into sand,
+                                            temporarily making it passable.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Sandstorm:</span>
+                                        <span class="text-gray-400 text-sm"> Enter stealth mode, making yourself hidden
+                                            to enemies that are far away.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Whirling Blades:</span>
+                                        <span class="text-gray-400 text-sm"> Throw up to 6 deadly daggers. Killing a
+                                            player with a dagger resets your cooldowns.</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-gray-300 text-sm mb-3">
-                            Wardens focused on <strong>raid combat</strong> excel at breaking into enemy bases and
-                            dealing damage to generators and anchor stones. Their abilities are designed for aggressive
-                            pushes and sustained assault.
-                        </p>
-                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
-                            <span class="text-gray-500">Best For:</span> Leading raids, planting bombs, destroying base
-                            structures
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Best infiltration ability in game</li>
+                                    <li>• Stealth enables surprise plays</li>
+                                    <li>• Ultimate resets on kills</li>
+                                    <li>• Excels in both raids and defense</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Condor's bird reveals stealth</li>
+                                    <li>• Kai can trap her with ice walls</li>
+                                    <li>• Requires map knowledge</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Siege Stealth -->
-                    <div id="siege-stealth" class="role-card bg-dark-800 border border-purple-500/30 rounded-xl p-5">
+                <!-- Atticus -->
+                <div id="atticus" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">⚡</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Atticus</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-assault/20 text-class-assault rounded text-xs font-medium">ASSAULT</span>
+                                        <span class="text-gray-400">• Lightning Captain</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-s/20 text-tier-s px-3 py-1 rounded">S-TIER</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                <em>"A lightning-wielding captain who uses a high-voltage arsenal to control the
+                                    battlefield and wreak havoc upon the enemy."</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Atticus is Highguard's poster character and an extremely versatile Assault Warden. His
+                                <strong>Supercharged Axe</strong> speeds up Vesper farming for faster gear upgrades. His
+                                ultimate <strong>Powerstorm</strong> punishes grouped enemies and can hit targets over
+                                walls, making him devastating during Overtime when respawns are disabled.
+                            </p>
+
+                            <!-- Abilities -->
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Supercharged Axe:</span>
+                                        <span class="text-gray-400 text-sm"> Charged Axe releases an electrical
+                                            explosion that damages nearby resource nodes.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Shockspear:</span>
+                                        <span class="text-gray-400 text-sm"> Throw a charged spear that shocks nearby
+                                            enemies. Continuous damage charges his passive.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Powerstorm:</span>
+                                        <span class="text-gray-400 text-sm"> Rise into the air and rain lightning spears
+                                            that do heavy damage to players and structures.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Faster Vesper farming</li>
+                                    <li>• Ultimate bypasses low cover</li>
+                                    <li>• Strong in all match phases</li>
+                                    <li>• Area denial with Shockspear</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Kai's ice barriers block attacks</li>
+                                    <li>• Mara's respawn negates wipes</li>
+                                    <li>• Vulnerable during ultimate</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- A-Tier Wardens -->
+            <section id="a-tier">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span
+                        class="w-8 h-8 bg-tier-a rounded-lg flex items-center justify-center text-sm text-white tier-badge">A</span>
+                    A-Tier Wardens
+                </h2>
+                <p class="text-gray-300 mb-6">Strong and reliable picks that excel in their roles. While not as
+                    universally dominant as S-Tier, they're essential for balanced team compositions.</p>
+
+                <!-- Mara -->
+                <div id="mara" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6 mb-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">👻</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Mara</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-support/20 text-class-support rounded text-xs font-medium">SUPPORT</span>
+                                        <span class="text-gray-400">• Soul Conjurer</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-a/20 text-tier-a px-3 py-1 rounded">A-TIER</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                <em>"A mysterious conjurer who absorbs and repurposes the souls of the fallen to shield
+                                    and support her allies."</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Mara is Highguard's essential Support character. Her <strong>Soul Armor</strong>
+                                provides overshields to teammates, while her ultimate <strong>Immortal Coil</strong>
+                                creates a respawn point that keeps the team fighting during deep-base sieges.
+                            </p>
+
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Sacrifice:</span>
+                                        <span class="text-gray-400 text-sm"> Sacrifice downed enemy players to charge
+                                            your tactical.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Soul Armor:</span>
+                                        <span class="text-gray-400 text-sm"> Grants allies an overshield that absorbs
+                                            damage.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Immortal Coil:</span>
+                                        <span class="text-gray-400 text-sm"> Create a spawn point for your team.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Only Support with team shields</li>
+                                    <li>• Respawn beacon game-changing</li>
+                                    <li>• Harvest souls for faster cooldowns</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Atticus bypasses with aerial attacks</li>
+                                    <li>• Needs soul energy to function</li>
+                                    <li>• Vulnerable without team support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kai -->
+                <div id="kai" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6 mb-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">❄️</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Kai</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-defensive/20 text-class-defensive rounded text-xs font-medium">DEFENSIVE</span>
+                                        <span class="text-gray-400">• Ice Monk</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-a/20 text-tier-a px-3 py-1 rounded">A-TIER</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                <em>"This disciplined monk harnesses the cold to reshape the battlefield for defense and
+                                    protection. Until his inner demon takes over…"</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Kai is the ultimate defensive anchor. His <strong>Frozen Repair</strong> passive
+                                restores broken walls, and his <strong>Ice Wall</strong> creates instant cover. His
+                                ultimate transforms him into a <strong>Frost Giant</strong> that tanks massive damage.
+                            </p>
+
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Frozen Repair:</span>
+                                        <span class="text-gray-400 text-sm"> Restore broken walls with ice.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Ice Wall:</span>
+                                        <span class="text-gray-400 text-sm"> Create an ice wall for cover or blocking
+                                            chokepoints.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Frost Giant:</span>
+                                        <span class="text-gray-400 text-sm"> Transform into Kai's inner ice demon with
+                                            increased durability.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Only Warden who repairs walls</li>
+                                    <li>• Instant cover creation</li>
+                                    <li>• Ultimate tanks for team</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Redmane destroys walls faster</li>
+                                    <li>• Limited offensive capability</li>
+                                    <li>• Atticus ultimate bypasses walls</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redmane -->
+                <div id="redmane" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">🦁</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Redmane</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-destruction/20 text-class-destruction rounded text-xs font-medium">DESTRUCTION</span>
+                                        <span class="text-gray-400">• Barbaric Enforcer</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-a/20 text-tier-a px-3 py-1 rounded">A-TIER</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                <em>"This barbaric enforcer unleashes primal, bestial strength upon his foes, laying
+                                    waste to anything in his path."</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Redmane is the ultimate siege engine. His <strong>Pounce</strong> smashes through walls,
+                                and his <strong>Beast's Roar</strong> ultimate destroys entire sections of enemy bases.
+                                His <strong>Enraged</strong> passive snowballs kills into massive movement buffs.
+                            </p>
+
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Enraged:</span>
+                                        <span class="text-gray-400 text-sm"> Gains movement and reload speed buff after
+                                            killing enemies.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Pounce:</span>
+                                        <span class="text-gray-400 text-sm"> Smash through breakable walls. Hold to
+                                            charge a powerful leap.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Beast's Roar:</span>
+                                        <span class="text-gray-400 text-sm"> Roar to destroy walls and other breakable
+                                            objects. Also damages enemies.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Best wall destruction in game</li>
+                                    <li>• High mobility with Pounce</li>
+                                    <li>• Snowball potential with kills</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Condor reveals position</li>
+                                    <li>• Atticus stuns during leap</li>
+                                    <li>• Niche focused on destruction</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- B-Tier Wardens -->
+            <section id="b-tier">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span
+                        class="w-8 h-8 bg-tier-b rounded-lg flex items-center justify-center text-sm text-white tier-badge">B</span>
+                    B-Tier Wardens
+                </h2>
+                <p class="text-gray-300 mb-6">Situational picks that excel in specific scenarios. Effective in
+                    coordinated teams but less impactful in solo queue.</p>
+
+                <!-- Slade -->
+                <div id="slade" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6 mb-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">🔥</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Slade</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-assault/20 text-class-assault rounded text-xs font-medium">ASSAULT</span>
+                                        <span class="text-gray-400">• Fire Maverick</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-b/20 text-tier-b px-3 py-1 rounded">B-TIER</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                <em>"A pyroclastic maverick who melts opponents with magma from below and firestorms
+                                    from above."</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Slade excels in tight corridors where his fire abilities can block chokepoints and flush
+                                enemies from cover. However, his reliance on environmental conditions limits his
+                                versatility.
+                            </p>
+
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Firebomb:</span>
+                                        <span class="text-gray-400 text-sm"> Explodes and spreads magma to an
+                                            area.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Hotstreak:</span>
+                                        <span class="text-gray-400 text-sm"> Gains reduced cooldowns and increased
+                                            firepower when on a kill streak.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Heatwave:</span>
+                                        <span class="text-gray-400 text-sm"> Sends out a cascading wave of molten
+                                            fire.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Firestorm:</span>
+                                        <span class="text-gray-400 text-sm"> Rains down fire upon the targeted
+                                            area.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Excellent area denial</li>
+                                    <li>• Strong in corridors/tunnels</li>
+                                    <li>• Two passive abilities</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Kai's ice absorbs fire</li>
+                                    <li>• Scarlet bypasses zones</li>
+                                    <li>• Weak at range</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Condor -->
+                <div id="condor" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">🦅</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Condor</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-recon/20 text-class-recon rounded text-xs font-medium">RECON</span>
+                                        <span class="text-gray-400">• Skilled Explorer</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-b/20 text-tier-b px-3 py-1 rounded">B-TIER</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                <em>"A skilled explorer who channels her extrasensory abilities through her winged
+                                    guardian to track enemy movements."</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Condor is the only Recon Warden, providing unmatched intel gathering. Her bird reveals
+                                enemy positions, making her invaluable for planning attacks. However, she lacks combat
+                                and defensive abilities.
+                            </p>
+
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Hunter's Instinct:</span>
+                                        <span class="text-gray-400 text-sm"> Condor's bird warns her when enemies are
+                                            nearby.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Eyes in the Sky:</span>
+                                        <span class="text-gray-400 text-sm"> Send out her bird to scan and detect
+                                            enemies that move.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Soaring Guardian:</span>
+                                        <span class="text-gray-400 text-sm"> Launch 3 smoke clouds that reveal enemies
+                                            within its wake.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Best intel gathering</li>
+                                    <li>• Reveals stealthed enemies</li>
+                                    <li>• Counters Scarlet</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• No combat abilities</li>
+                                    <li>• No mobility or escape</li>
+                                    <li>• Atticus/Redmane close gap fast</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- C-Tier Wardens -->
+            <section id="c-tier">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span
+                        class="w-8 h-8 bg-tier-c rounded-lg flex items-center justify-center text-sm text-white tier-badge">C</span>
+                    C-Tier Wardens
+                </h2>
+                <p class="text-gray-300 mb-6">Niche picks that are outclassed by other options. Can work in very
+                    specific team compositions but rarely optimal.</p>
+
+                <!-- Una -->
+                <div id="una" class="warden-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-4xl">🌿</span>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white font-display">Una</h3>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span
+                                            class="px-2 py-0.5 bg-class-defensive/20 text-class-defensive rounded text-xs font-medium">DEFENSIVE</span>
+                                        <span class="text-gray-400">• Spirit Binder</span>
+                                    </div>
+                                </div>
+                                <span
+                                    class="ml-auto tier-badge text-xl bg-tier-c/20 text-tier-c px-3 py-1 rounded">C-TIER</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                <em>"A spirit binder capable of summoning the wayward spirits of the Wildwood to aid her
+                                    in battle."</em>
+                            </p>
+                            <p class="text-gray-400 text-sm mb-4">
+                                Una offers a unique summoner playstyle with spirit companions. Her <strong>Helping
+                                    Hand</strong> passive provides loot bonuses, but she's overshadowed by Kai for
+                                defensive roles and lacks consistent damage output.
+                            </p>
+
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-gray-700 text-gray-300 rounded mt-1">PASSIVE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Helping Hand:</span>
+                                        <span class="text-gray-400 text-sm"> Spirits appear to give Una loot.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-arcane-600 text-white rounded mt-1">TACTICAL</span>
+                                    <div>
+                                        <span class="font-medium text-white">Forest Wisps:</span>
+                                        <span class="text-gray-400 text-sm"> Summon mischievous spirits who lob
+                                            concussion grenades at enemies.</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="ability-tag bg-yellow-600 text-white rounded mt-1">ULTIMATE</span>
+                                    <div>
+                                        <span class="font-medium text-white">Tree Walker:</span>
+                                        <span class="text-gray-400 text-sm"> Summon a large forest spirit that throws
+                                            smaller explosive spirits at enemies.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 space-y-3">
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-green-400 uppercase mb-2">✅ Strengths</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Unique summoner playstyle</li>
+                                    <li>• Free loot from passive</li>
+                                    <li>• Chokepoint pressure</li>
+                                </ul>
+                            </div>
+                            <div class="bg-dark-900/50 rounded-lg p-3">
+                                <h4 class="text-xs font-semibold text-red-400 uppercase mb-2">❌ Counters</h4>
+                                <ul class="text-sm text-gray-400 space-y-1">
+                                    <li>• Atticus destroys wisps easily</li>
+                                    <li>• Slade's fire kills wisps</li>
+                                    <li>• Outclassed by Kai for defense</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Warden Classes -->
+            <section id="classes">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">📋</span>
+                    Warden Classes Explained
+                </h2>
+                <p class="text-gray-300 mb-6">Each Warden belongs to one of 5 classes that define their role in the
+                    team:</p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-dark-800 border border-class-assault/30 rounded-xl p-5">
                         <div class="flex items-center gap-3 mb-3">
                             <div
-                                class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-2xl">
-                                🗡️</div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-purple-400">Siege Stealth</h3>
-                                <p class="text-gray-400 text-sm">Infiltration and flanking experts</p>
-                            </div>
+                                class="w-10 h-10 bg-class-assault/20 rounded-lg flex items-center justify-center text-xl">
+                                ⚔️</div>
+                            <h3 class="font-semibold text-class-assault font-display">Assault</h3>
                         </div>
-                        <p class="text-gray-300 text-sm mb-3">
-                            <strong>Siege stealth</strong> Wardens specialize in sneaking into enemy territory
-                            undetected. Their abilities allow for flanking, ambushing defenders, and creating openings
-                            for teammates.
-                        </p>
-                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
-                            <span class="text-gray-500">Best For:</span> Flanking, scouting, assassinating isolated
-                            defenders
-                        </div>
+                        <p class="text-gray-400 text-sm mb-3">Aggressive abilities for frontline combat.</p>
+                        <div class="text-xs text-gray-500">Wardens: Scarlet, Atticus, Slade</div>
                     </div>
 
-                    <!-- Base Defense -->
-                    <div id="base-defense" class="role-card bg-dark-800 border border-blue-500/30 rounded-xl p-5">
+                    <div class="bg-dark-800 border border-class-defensive/30 rounded-xl p-5">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-2xl">
+                            <div
+                                class="w-10 h-10 bg-class-defensive/20 rounded-lg flex items-center justify-center text-xl">
                                 🛡️</div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-blue-400">Base Defense</h3>
-                                <p class="text-gray-400 text-sm">Protection and repair specialists</p>
-                            </div>
+                            <h3 class="font-semibold text-class-defensive font-display">Defensive</h3>
                         </div>
-                        <p class="text-gray-300 text-sm mb-3">
-                            <strong>Base defense</strong> Wardens keep your stronghold secure. They can repair walls,
-                            reinforce structures, and repel enemy raiders with defensive abilities.
-                        </p>
-                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
-                            <span class="text-gray-500">Best For:</span> Holding the base, repairing damage, buying time
-                            for teammates
-                        </div>
+                        <p class="text-gray-400 text-sm mb-3">Protection, repairs, and area control.</p>
+                        <div class="text-xs text-gray-500">Wardens: Kai, Una</div>
                     </div>
 
-                    <!-- Harvesting -->
-                    <div id="harvesting" class="role-card bg-dark-800 border border-green-500/30 rounded-xl p-5">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-2xl">
-                                🎒</div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-green-400">Harvesting</h3>
-                                <p class="text-gray-400 text-sm">Loot and resource gathering</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 text-sm mb-3">
-                            <strong>Harvesting</strong> Wardens excel at gathering loot efficiently. Their abilities
-                            help the team gear up faster, find better weapons, and maintain an equipment advantage.
-                        </p>
-                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
-                            <span class="text-gray-500">Best For:</span> Early-game looting, equipping your team,
-                            finding rare gear
-                        </div>
-                    </div>
-
-                    <!-- Open-World Combat -->
-                    <div id="open-world" class="role-card bg-dark-800 border border-orange-500/30 rounded-xl p-5">
+                    <div class="bg-dark-800 border border-class-destruction/30 rounded-xl p-5">
                         <div class="flex items-center gap-3 mb-3">
                             <div
-                                class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center text-2xl">
-                                🎯</div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-orange-400">Open-World Combat</h3>
-                                <p class="text-gray-400 text-sm">Field battle dominators</p>
-                            </div>
+                                class="w-10 h-10 bg-class-destruction/20 rounded-lg flex items-center justify-center text-xl">
+                                💥</div>
+                            <h3 class="font-semibold text-class-destruction font-display">Destruction</h3>
                         </div>
-                        <p class="text-gray-300 text-sm mb-3">
-                            <strong>Open-world combat</strong> Wardens thrive in field fights. They're ideal for
-                            Shieldbreaker battles, ambushing enemies in the open, and controlling key areas of the map.
-                        </p>
-                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
-                            <span class="text-gray-500">Best For:</span> Shieldbreaker fights, map control, team fights
-                            outside bases
+                        <p class="text-gray-400 text-sm mb-3">Breaking structures and creating entry points.</p>
+                        <div class="text-xs text-gray-500">Wardens: Redmane</div>
+                    </div>
+
+                    <div class="bg-dark-800 border border-class-recon/30 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 bg-class-recon/20 rounded-lg flex items-center justify-center text-xl">
+                                👁️</div>
+                            <h3 class="font-semibold text-class-recon font-display">Recon</h3>
                         </div>
+                        <p class="text-gray-400 text-sm mb-3">Scouting, tracking, and intel gathering.</p>
+                        <div class="text-xs text-gray-500">Wardens: Condor</div>
+                    </div>
+
+                    <div class="bg-dark-800 border border-class-support/30 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 bg-class-support/20 rounded-lg flex items-center justify-center text-xl">
+                                💜</div>
+                            <h3 class="font-semibold text-class-support font-display">Support</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">Healing, shields, and team buffs.</p>
+                        <div class="text-xs text-gray-500">Wardens: Mara</div>
                     </div>
                 </div>
             </section>
 
             <!-- Team Compositions -->
             <section id="team-comps">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">3</span>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">👥</span>
                     Recommended Team Compositions
                 </h2>
-                <p class="text-gray-300 mb-6">
-                    With 3-player teams, role balance is crucial. Here are suggested compositions based on official role
-                    types:
-                </p>
+                <p class="text-gray-300 mb-6">With 3-player teams, role balance is crucial. Here are proven
+                    compositions:</p>
 
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
-                        <h3 class="font-semibold text-white mb-3">🔥 Aggressive Raid Comp</h3>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li><span class="text-red-400">▸</span> 1× Raid Combat (lead breacher)</li>
-                            <li><span class="text-purple-400">▸</span> 1× Siege Stealth (flanker)</li>
-                            <li><span class="text-orange-400">▸</span> 1× Open-World Combat (Shieldbreaker carrier)</li>
-                        </ul>
-                        <p class="text-xs text-gray-500 mt-3">Focus: Fast raids, map control, aggression</p>
+                        <h3 class="font-semibold text-white mb-3 font-display">🔥 Aggressive Raid Comp</h3>
+                        <div class="space-y-2 text-sm mb-3">
+                            <div class="flex items-center gap-2"><span class="text-tier-s">▸</span> Scarlet
+                                (infiltration)</div>
+                            <div class="flex items-center gap-2"><span class="text-tier-s">▸</span> Atticus (damage)
+                            </div>
+                            <div class="flex items-center gap-2"><span class="text-tier-a">▸</span> Redmane (wall
+                                breaching)</div>
+                        </div>
+                        <p class="text-xs text-gray-500">Focus: Fast raids, overwhelming offense</p>
                     </div>
 
                     <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
-                        <h3 class="font-semibold text-white mb-3">🛡️ Balanced Comp</h3>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li><span class="text-red-400">▸</span> 1× Raid Combat</li>
-                            <li><span class="text-blue-400">▸</span> 1× Base Defense</li>
-                            <li><span class="text-orange-400">▸</span> 1× Open-World Combat</li>
-                        </ul>
-                        <p class="text-xs text-gray-500 mt-3">Focus: All-around flexibility, both offense and defense
-                        </p>
+                        <h3 class="font-semibold text-white mb-3 font-display">🛡️ Balanced Meta Comp</h3>
+                        <div class="space-y-2 text-sm mb-3">
+                            <div class="flex items-center gap-2"><span class="text-tier-s">▸</span> Scarlet
+                                (flex/infiltrate)</div>
+                            <div class="flex items-center gap-2"><span class="text-tier-a">▸</span> Mara (support)</div>
+                            <div class="flex items-center gap-2"><span class="text-tier-a">▸</span> Kai (defense)</div>
+                        </div>
+                        <p class="text-xs text-gray-500">Focus: All-around flexibility, sustainable fights</p>
                     </div>
 
                     <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
-                        <h3 class="font-semibold text-white mb-3">💎 Economy Comp</h3>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li><span class="text-green-400">▸</span> 1× Harvesting (early loot)</li>
-                            <li><span class="text-blue-400">▸</span> 1× Base Defense (protect base)</li>
-                            <li><span class="text-orange-400">▸</span> 1× Open-World Combat</li>
-                        </ul>
-                        <p class="text-xs text-gray-500 mt-3">Focus: Outgear opponents, late-game scaling</p>
+                        <h3 class="font-semibold text-white mb-3 font-display">🏰 Unbreakable Defense</h3>
+                        <div class="space-y-2 text-sm mb-3">
+                            <div class="flex items-center gap-2"><span class="text-tier-a">▸</span> Kai (wall repairs)
+                            </div>
+                            <div class="flex items-center gap-2"><span class="text-tier-a">▸</span> Mara (shields)</div>
+                            <div class="flex items-center gap-2"><span class="text-tier-b">▸</span> Condor (intel)</div>
+                        </div>
+                        <p class="text-xs text-gray-500">Focus: Hold base, outlast enemy raids</p>
                     </div>
 
                     <div class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5">
-                        <h3 class="font-semibold text-white mb-3">🗡️ Stealth Comp</h3>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li><span class="text-purple-400">▸</span> 2× Siege Stealth</li>
-                            <li><span class="text-red-400">▸</span> 1× Raid Combat</li>
-                        </ul>
-                        <p class="text-xs text-gray-500 mt-3">Focus: Surprise attacks, multi-angle infiltration</p>
+                        <h3 class="font-semibold text-white mb-3 font-display">⚡ Lightning Strike</h3>
+                        <div class="space-y-2 text-sm mb-3">
+                            <div class="flex items-center gap-2"><span class="text-tier-s">▸</span> Atticus (AoE damage)
+                            </div>
+                            <div class="flex items-center gap-2"><span class="text-tier-b">▸</span> Slade (area denial)
+                            </div>
+                            <div class="flex items-center gap-2"><span class="text-tier-a">▸</span> Redmane (breach)
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500">Focus: Zone control, punish grouped enemies</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Community Vote Section -->
-            <section
-                class="bg-gradient-to-br from-arcane-900/40 to-dark-800 border border-arcane-500/30 rounded-xl p-6">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="text-3xl">🗳️</span>
-                    <div>
-                        <h2 class="text-xl font-bold">Community Tier Voting</h2>
-                        <p class="text-gray-400 text-sm">Help shape the meta! Vote for your favorite Wardens.</p>
+            <!-- Counter Chart -->
+            <section id="counters">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">⚔️</span>
+                    Counter Matchups
+                </h2>
+                <p class="text-gray-300 mb-6">Quick reference for which Wardens counter each other:</p>
+
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead class="bg-dark-900">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-gray-400 font-medium">Warden</th>
+                                    <th class="px-4 py-3 text-left text-gray-400 font-medium">Countered By</th>
+                                    <th class="px-4 py-3 text-left text-gray-400 font-medium">Counters</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-arcane-900/30">
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Scarlet</td>
+                                    <td class="px-4 py-3 text-red-400">Condor, Kai</td>
+                                    <td class="px-4 py-3 text-green-400">Slade, Una</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Atticus</td>
+                                    <td class="px-4 py-3 text-red-400">Kai, Mara</td>
+                                    <td class="px-4 py-3 text-green-400">Redmane, Una, Condor</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Mara</td>
+                                    <td class="px-4 py-3 text-red-400">Atticus, Redmane</td>
+                                    <td class="px-4 py-3 text-green-400">Atticus (negates wipes)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Kai</td>
+                                    <td class="px-4 py-3 text-red-400">Redmane, Atticus</td>
+                                    <td class="px-4 py-3 text-green-400">Scarlet, Slade</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Redmane</td>
+                                    <td class="px-4 py-3 text-red-400">Condor, Atticus</td>
+                                    <td class="px-4 py-3 text-green-400">Kai, Una</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Slade</td>
+                                    <td class="px-4 py-3 text-red-400">Kai, Scarlet</td>
+                                    <td class="px-4 py-3 text-green-400">Una</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Condor</td>
+                                    <td class="px-4 py-3 text-red-400">Atticus, Redmane</td>
+                                    <td class="px-4 py-3 text-green-400">Scarlet</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-white">Una</td>
+                                    <td class="px-4 py-3 text-red-400">Atticus, Slade, Everyone</td>
+                                    <td class="px-4 py-3 text-green-400">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-                <p class="text-gray-300 text-sm mb-4">
-                    Since Highguard just launched, we're collecting community data to build an accurate tier list. Once
-                    enough votes are gathered, we'll publish official S/A/B/C rankings.
-                </p>
-                <div class="bg-dark-900/60 rounded-lg p-4 text-center">
-                    <p class="text-gray-400 text-sm mb-3">Voting opens when we have confirmed Warden names from official
-                        sources.</p>
-                    <a href="https://discord.gg/highguard" target="_blank" rel="noopener"
-                        class="inline-flex items-center gap-2 bg-arcane-600 hover:bg-arcane-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.36-.698.772-1.362 1.225-1.993a.076.076 0 0 0-.041-.107 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.12-.094.246-.194.373-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
-                        </svg>
-                        Join Discord to Vote
-                    </a>
                 </div>
             </section>
 
             <!-- FAQ -->
             <section id="faq">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">4</span>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 font-display">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">❓</span>
                     Frequently Asked Questions
                 </h2>
 
                 <div class="space-y-3">
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
-                            What are Wardens in Highguard?
+                            Who is the best Warden in Highguard?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">Wardens are playable characters in Highguard—arcane
-                            gunslingers with unique magical abilities, specialized weapons, and raid tools.</div>
+                        <div class="px-4 pb-4 text-gray-400">Based on early meta consensus, <strong>Scarlet</strong> and
+                            <strong>Atticus</strong> are considered the best Wardens. Scarlet's infiltration abilities
+                            make her essential for raids, while Atticus provides unmatched versatility across all phases
+                            of a match.
+                        </div>
                     </details>
+
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
-                            How many Wardens are in the game?
+                            How many Wardens are in Highguard?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">Highguard features an ever-growing roster. New Wardens are
-                            added with each monthly Episode update. The exact launch count is being confirmed.</div>
+                        <div class="px-4 pb-4 text-gray-400">Highguard launched with <strong>8 Wardens</strong>:
+                            Atticus, Condor, Kai, Mara, Redmane, Scarlet, Slade, and Una. More Wardens will be added in
+                            future Episode updates.</div>
                     </details>
+
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
-                            Why isn't there a traditional S/A/B/C tier list?
+                            Are all Wardens free in Highguard?
                             <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">Highguard launched just 4 days ago. The competitive meta
-                            hasn't stabilized, and publishing unverified rankings could mislead players. We'll add
-                            traditional tiers once community data is available.</div>
+                        <div class="px-4 pb-4 text-gray-400">Yes, all Wardens in Highguard are <strong>completely
+                                free</strong>. Unlike some hero shooters, you do not need to unlock or purchase any
+                            characters.</div>
                     </details>
+
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            What are the 5 Warden classes?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">The 5 Warden classes are: <strong>Assault</strong>
+                            (aggressive combat), <strong>Defensive</strong> (protection and repairs),
+                            <strong>Destruction</strong> (breaking structures), <strong>Recon</strong> (scouting and
+                            intel), and <strong>Support</strong> (healing and team buffs).
+                        </div>
+                    </details>
+
                     <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
                         <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
                             When will this tier list be updated?
@@ -426,23 +1232,38 @@
                                     d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
-                        <div class="px-4 pb-4 text-gray-400">We update with each Episode release and after major balance
-                            patches. Join our Discord for update notifications.</div>
+                        <div class="px-4 pb-4 text-gray-400">We update this tier list with each Episode release, major
+                            balance patches, and as the competitive meta evolves. The next major update is expected with
+                            Episode 2 in February 2026.</div>
+                    </details>
+
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            Which Warden is best for beginners?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400"><strong>Atticus</strong> is recommended for beginners due
+                            to his straightforward abilities and versatility. <strong>Kai</strong> is also
+                            beginner-friendly for players who prefer a defensive playstyle.</div>
                     </details>
                 </div>
             </section>
 
         </article>
 
-        <!-- Related Pages -->
+        <!-- Related Guides -->
         <section class="border-t border-arcane-900/30 pt-10 mt-10">
-            <h2 class="text-xl font-bold mb-6">📚 Related Guides</h2>
+            <h2 class="text-xl font-bold mb-6 font-display">📚 Related Guides</h2>
             <div class="grid sm:grid-cols-2 gap-4">
                 <a href="/guides/beginners/"
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
                     <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-xl">📖</div>
                     <div>
-                        <h3 class="font-semibold">Beginner's Guide</h3>
+                        <h3 class="font-semibold font-display">Beginner's Guide</h3>
                         <p class="text-gray-400 text-sm">Start your journey</p>
                     </div>
                 </a>
@@ -450,7 +1271,7 @@
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
                     <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-xl">🔫</div>
                     <div>
-                        <h3 class="font-semibold">Weapons Tier List</h3>
+                        <h3 class="font-semibold font-display">Weapons Tier List</h3>
                         <p class="text-gray-400 text-sm">Best guns ranked</p>
                     </div>
                 </a>
@@ -458,30 +1279,31 @@
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
                     <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-xl">⚡</div>
                     <div>
-                        <h3 class="font-semibold">Raid Guide</h3>
+                        <h3 class="font-semibold font-display">Raid Guide</h3>
                         <p class="text-gray-400 text-sm">Master raid mechanics</p>
                     </div>
                 </a>
-                <a href="/tools/build-planner/"
+                <a href="/guides/strongholds/"
                     class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
-                    <div class="w-12 h-12 bg-arcane-500/20 rounded-lg flex items-center justify-center text-xl">🧩</div>
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl">🏰</div>
                     <div>
-                        <h3 class="font-semibold">Build Planner</h3>
-                        <p class="text-gray-400 text-sm">Optimize your loadout</p>
+                        <h3 class="font-semibold font-display">Stronghold Strategy</h3>
+                        <p class="text-gray-400 text-sm">Choose the best base</p>
                     </div>
                 </a>
             </div>
         </section>
 
-        <!-- Version Disclaimer -->
+        <!-- Version & Disclaimer -->
         <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mt-10">
-            <h3 class="font-semibold text-gray-300 mb-3">📋 Version & Disclaimer</h3>
+            <h3 class="font-semibold text-gray-300 mb-3 font-display">📋 Version & Sources</h3>
             <ul class="text-sm text-gray-500 space-y-1">
                 <li><strong>Game Version:</strong> Episode 1 (Launch, Jan 26, 2026)</li>
                 <li><strong>Last Updated:</strong> January 30, 2026</li>
-                <li><strong>Data Sources:</strong> Steam Official Store Page, Developer Descriptions</li>
-                <li><strong>Note:</strong> Specific Warden names and abilities will be added as official information
-                    becomes available.</li>
+                <li><strong>Data Sources:</strong> Destructoid (official abilities), Dexerto, Beebom, DTGRE (tier
+                    rankings)</li>
+                <li><strong>Confidence:</strong> High for Warden abilities (official sources), Medium for tier rankings
+                    (early meta, may shift)</li>
             </ul>
             <p class="text-xs text-gray-600 mt-3">Highguard.wiki is a fan-made resource. All game content © 2026
                 Wildlight Entertainment Inc.</p>
