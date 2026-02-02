@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highguard Patch Notes & Updates — Episode 1 Changelog (2026)</title>
+    <meta name="description"
+        content="Complete Highguard patch notes and update history. Track Episode updates, balance changes, new Wardens, weapons, and bug fixes. Updated for February 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://highguard.wiki/patch-notes/">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L4 7v10l8 5 8-5V7l-8-5z'/></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Highguard Patch Notes — All Updates (2026)">
+    <meta property="og:description"
+        content="Complete changelog for Highguard. Track all Episode updates, balance changes, and new content.">
+    <meta property="og:url" content="https://highguard.wiki/patch-notes/">
+    <meta property="og:site_name" content="Highguard Wiki">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highguard Patch Notes 2026">
+    <meta name="twitter:description" content="All updates, balance changes, and new content for Highguard.">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcane: { 50: '#f0f4ff', 100: '#e0e7ff', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#1e1b4b' },
+                        dark: { 800: '#1e1e2e', 900: '#0f0f1a', 950: '#080810' }
+                    },
+                    fontFamily: {
+                        display: ['Rajdhani', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .glow-sm {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .patch-card {
+            transition: all 0.3s ease;
+        }
+
+        .patch-card:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+
+        .tag-new {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .tag-fix {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+        }
+
+        .tag-balance {
+            background: rgba(249, 115, 22, 0.2);
+            color: #f97316;
+        }
+
+        .tag-qol {
+            background: rgba(168, 85, 247, 0.2);
+            color: #a855f7;
+        }
+    </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Highguard Patch Notes & Updates — Complete Changelog","description":"Track all Highguard updates including Episode releases, balance changes, new Wardens, and bug fixes.","author":{"@type":"Organization","name":"Highguard Wiki"},"publisher":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-02-02","dateModified":"2026-02-02"}
+    </script>
+</head>
+
+<body class="bg-dark-950 text-gray-100 antialiased">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-arcane-900/50">
+        <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-xl font-bold text-white" aria-label="Highguard Wiki Home">
+                <svg class="w-8 h-8 text-arcane-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5L18 8v8l-6 3.75L6 16V8l6-3.5z" />
+                    <path d="M12 6v12M8 8l4 2.5L16 8" />
+                </svg>
+                <span class="font-display">Highguard<span class="text-arcane-400">.wiki</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-5 text-sm">
+                <a href="/guides/" class="hover:text-arcane-400 transition">Guides</a>
+                <a href="/wardens/" class="hover:text-arcane-400 transition">Wardens</a>
+                <a href="/weapons/" class="hover:text-arcane-400 transition">Weapons</a>
+                <a href="/maps/" class="hover:text-arcane-400 transition">Maps</a>
+                <a href="/tools/" class="hover:text-arcane-400 transition">Tools</a>
+                <a href="/patch-notes/" class="text-arcane-400">Patch Notes</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2">
+                <li><a href="/" class="hover:text-arcane-400">Home</a></li>
+                <li>/</li>
+                <li class="text-gray-300">Patch Notes</li>
+            </ol>
+        </nav>
+
+        <!-- Page Header -->
+        <header class="mb-10">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                <span class="bg-arcane-500/20 text-arcane-400 px-2 py-0.5 rounded text-xs font-medium">UPDATES</span>
+                <span>•</span>
+                <span>Last Updated: Feb 2, 2026</span>
+            </div>
+            <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                Highguard Patch Notes & Update History
+            </h1>
+            <p class="text-lg text-gray-300 mb-6">
+                Track all <strong>Highguard updates</strong>, balance changes, new content, and bug fixes.
+                This page is updated with each patch and Episode release.
+            </p>
+
+            <!-- Quick Links -->
+            <div class="flex flex-wrap gap-2">
+                <a href="#episode-2"
+                    class="bg-dark-800 hover:bg-dark-900 border border-arcane-500/30 px-3 py-1.5 rounded-lg text-sm transition">
+                    🔮 Episode 2 (Coming Soon)
+                </a>
+                <a href="#5v5-mode"
+                    class="bg-dark-800 hover:bg-dark-900 border border-green-500/30 px-3 py-1.5 rounded-lg text-sm transition">
+                    🆕 5v5 Mode
+                </a>
+                <a href="#patch-104"
+                    class="bg-dark-800 hover:bg-dark-900 border border-blue-500/30 px-3 py-1.5 rounded-lg text-sm transition">
+                    🔧 Patch 1.0.4
+                </a>
+                <a href="#episode-1"
+                    class="bg-dark-800 hover:bg-dark-900 border border-purple-500/30 px-3 py-1.5 rounded-lg text-sm transition">
+                    🚀 Episode 1 Launch
+                </a>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="space-y-8">
+
+            <!-- Upcoming: Episode 2 -->
+            <section id="episode-2"
+                class="patch-card bg-gradient-to-br from-arcane-900/40 to-dark-800 border border-arcane-500/50 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🔮</span>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-xl font-bold font-display">Episode 2</h2>
+                            <span
+                                class="bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded text-xs font-medium">COMING
+                                SOON</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Expected: February 9-15, 2026</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 mb-4">
+                    Episode 2 will be released in two parts over February and March 2026, bringing significant new
+                    content.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-dark-900/50 rounded-lg p-4">
+                        <h3 class="font-semibold text-arcane-400 mb-2">Part One (February)</h3>
+                        <ul class="space-y-1 text-sm text-gray-400">
+                            <li>✦ New Warden (character)</li>
+                            <li>✦ New Map</li>
+                            <li>✦ <strong class="text-white">Ranked Mode</strong></li>
+                            <li>✦ New Mount</li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-900/50 rounded-lg p-4">
+                        <h3 class="font-semibold text-arcane-400 mb-2">Part Two (March)</h3>
+                        <ul class="space-y-1 text-sm text-gray-400">
+                            <li>✦ New Base/Stronghold</li>
+                            <li>✦ New Raid Tool</li>
+                            <li>✦ Additional balance changes</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5v5 Experimental Mode -->
+            <section id="5v5-mode" class="patch-card bg-dark-800 border border-green-500/30 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🎮</span>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-xl font-bold font-display">Experimental 5v5 Raid Mode</h2>
+                            <span class="tag-new px-2 py-0.5 rounded text-xs font-medium">NEW</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Released: February 1, 2026 (Limited Time)</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 mb-4">
+                    In response to player feedback, Wildlight Entertainment introduced an experimental 5v5 Raid Mode
+                    as a separate playlist. This mode tests larger team dynamics.
+                </p>
+
+                <div class="bg-dark-900/50 rounded-lg p-4 mb-4">
+                    <h3 class="font-semibold text-white mb-2">Mode Changes</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <span class="tag-new px-1.5 py-0.5 rounded text-xs shrink-0">NEW</span>
+                            <span><strong>10 Lives per Raid</strong> — Increased from 6 lives in standard 3v3</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-balance px-1.5 py-0.5 rounded text-xs shrink-0">CHANGE</span>
+                            <span><strong>Slightly Longer Respawns</strong> — Balances larger team size</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-new px-1.5 py-0.5 rounded text-xs shrink-0">NEW</span>
+                            <span><strong>New Base: Soul Well</strong> — Added to rotation for all modes</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-3 text-sm">
+                    <strong class="text-yellow-400">⚠️ Note:</strong> This is an experimental playlist and may be
+                    modified or removed based on player feedback and data.
+                </div>
+            </section>
+
+            <!-- Patch 1.0.4 -->
+            <section id="patch-104" class="patch-card bg-dark-800 border border-blue-500/30 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🔧</span>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-xl font-bold font-display">Patch 1.0.4</h2>
+                            <span class="tag-fix px-2 py-0.5 rounded text-xs font-medium">HOTFIX</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Released: January 29-30, 2026</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 mb-4">
+                    Major quality-of-life update deployed less than 48 hours after launch in response to player
+                    feedback. Addressed performance issues and added highly requested features.
+                </p>
+
+                <!-- Stability -->
+                <div class="mb-4">
+                    <h3 class="font-semibold text-white mb-2 flex items-center gap-2">
+                        <span
+                            class="w-6 h-6 bg-green-500/20 rounded flex items-center justify-center text-green-400 text-xs">✔</span>
+                        Stability & Performance
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-400 ml-8">
+                        <li class="flex items-start gap-2">
+                            <span class="tag-fix px-1.5 py-0.5 rounded text-xs shrink-0">FIX</span>
+                            <span><strong>90% Crash Reduction</strong> — Major stability improvements</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-fix px-1.5 py-0.5 rounded text-xs shrink-0">FIX</span>
+                            <span>Resolved matchmaking and friend status issues</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-fix px-1.5 py-0.5 rounded text-xs shrink-0">FIX</span>
+                            <span>Fixed engine bug capping some laptops at 60 FPS</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Input Settings -->
+                <div class="mb-4">
+                    <h3 class="font-semibold text-white mb-2 flex items-center gap-2">
+                        <span
+                            class="w-6 h-6 bg-purple-500/20 rounded flex items-center justify-center text-purple-400 text-xs">⚙</span>
+                        Input Settings
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-400 ml-8">
+                        <li class="flex items-start gap-2">
+                            <span class="tag-qol px-1.5 py-0.5 rounded text-xs shrink-0">QoL</span>
+                            <span><strong>Crouch Toggle</strong> — Added for all platforms</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-qol px-1.5 py-0.5 rounded text-xs shrink-0">QoL</span>
+                            <span><strong>ADS Toggle</strong> — Added for PC players</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Video Settings -->
+                <div class="mb-4">
+                    <h3 class="font-semibold text-white mb-2 flex items-center gap-2">
+                        <span
+                            class="w-6 h-6 bg-blue-500/20 rounded flex items-center justify-center text-blue-400 text-xs">📺</span>
+                        Video Settings
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-400 ml-8">
+                        <li class="flex items-start gap-2">
+                            <span class="tag-new px-1.5 py-0.5 rounded text-xs shrink-0">NEW</span>
+                            <span><strong>FOV Slider (Console)</strong> — PS5 & Xbox can now adjust up to 110</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-new px-1.5 py-0.5 rounded text-xs shrink-0">NEW</span>
+                            <span><strong>View Distance Quality</strong> — Control skeletal mesh LODs</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-qol px-1.5 py-0.5 rounded text-xs shrink-0">QoL</span>
+                            <span>Low scalability options for shadows and reflections</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="tag-qol px-1.5 py-0.5 rounded text-xs shrink-0">QoL</span>
+                            <span>Toggle options: Motion Blur, Volumetric Fog, Chromatic Aberration, Bloom</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-3 text-sm">
+                    <strong class="text-arcane-400">📝 Note:</strong> Some menu options were not yet localized in
+                    languages other than English. Proper localization planned for future patches.
+                </div>
+            </section>
+
+            <!-- Episode 1 Launch -->
+            <section id="episode-1" class="patch-card bg-dark-800 border border-purple-500/30 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-3xl">🚀</span>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h2 class="text-xl font-bold font-display">Episode 1: Launch</h2>
+                            <span
+                                class="bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded text-xs font-medium">RELEASE</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Released: January 26, 2026</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 mb-4">
+                    Highguard officially launched as a free-to-play PvP Raid Shooter on PC (Steam), PlayStation 5,
+                    and Xbox Series X/S with full cross-play and cross-progression support.
+                </p>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                    <div class="bg-dark-900/50 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-bold text-arcane-400 font-display">8</p>
+                        <p class="text-sm text-gray-400">Wardens</p>
+                    </div>
+                    <div class="bg-dark-900/50 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-bold text-arcane-400 font-display">5</p>
+                        <p class="text-sm text-gray-400">Maps</p>
+                    </div>
+                    <div class="bg-dark-900/50 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-bold text-arcane-400 font-display">6</p>
+                        <p class="text-sm text-gray-400">Bases</p>
+                    </div>
+                    <div class="bg-dark-900/50 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-bold text-arcane-400 font-display">10</p>
+                        <p class="text-sm text-gray-400">Weapons</p>
+                    </div>
+                    <div class="bg-dark-900/50 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-bold text-arcane-400 font-display">3</p>
+                        <p class="text-sm text-gray-400">Raid Tools</p>
+                    </div>
+                    <div class="bg-dark-900/50 rounded-lg p-4 text-center">
+                        <p class="text-3xl font-bold text-arcane-400 font-display">3</p>
+                        <p class="text-sm text-gray-400">Mounts</p>
+                    </div>
+                </div>
+
+                <div class="bg-dark-900/50 rounded-lg p-4 mb-4">
+                    <h3 class="font-semibold text-white mb-2">Launch Content</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><span class="text-arcane-400">▸</span> <strong>8 Wardens:</strong> Redmane, Condor, Atticus,
+                            Kai, Slade, Scarlet, Una, Mara</li>
+                        <li><span class="text-arcane-400">▸</span> <strong>10 Weapons:</strong> Assault Rifles,
+                            Shotguns, SMGs, Sniper, Revolver, Gatling Gun</li>
+                        <li><span class="text-arcane-400">▸</span> <strong>3 Raid Tools:</strong> Blast Hammer, Zipline
+                            Gun, Rocket Launcher</li>
+                        <li><span class="text-arcane-400">▸</span> <strong>11 Weapon Mods:</strong> Attachments and
+                            upgrades</li>
+                        <li><span class="text-arcane-400">▸</span> <strong>Free War Chest:</strong> 44 cosmetics for all
+                            players</li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-3 text-sm">
+                    <strong class="text-green-400">🎁 Bonus:</strong> All Episode One launch players received a
+                    free War Chest containing 44 cosmetic items.
+                </div>
+            </section>
+
+            <!-- 2026 Roadmap -->
+            <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                <h2 class="text-xl font-bold font-display mb-4 flex items-center gap-2">
+                    <span class="text-2xl">🗺️</span> 2026 Content Roadmap
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Wildlight Entertainment has committed to monthly Episode updates throughout 2026, each bringing
+                    new Wardens, maps, weapons, and game modes.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-dark-900">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-gray-400 font-medium">Episode</th>
+                                <th class="px-4 py-3 text-left text-gray-400 font-medium">Expected</th>
+                                <th class="px-4 py-3 text-left text-gray-400 font-medium">Key Features</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-arcane-900/30">
+                            <tr class="bg-purple-500/5">
+                                <td class="px-4 py-3 text-purple-400 font-medium">Episode 1</td>
+                                <td class="px-4 py-3 text-gray-300">Jan 26 ✅</td>
+                                <td class="px-4 py-3 text-gray-400">Launch: 8 Wardens, 5 Maps, Full Game</td>
+                            </tr>
+                            <tr class="bg-arcane-500/5">
+                                <td class="px-4 py-3 text-arcane-400 font-medium">Episode 2</td>
+                                <td class="px-4 py-3 text-gray-300">Feb 9-15</td>
+                                <td class="px-4 py-3 text-gray-400">New Warden, Ranked Mode, New Map</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-gray-400 font-medium">Episode 3</td>
+                                <td class="px-4 py-3 text-gray-500">~April 2026</td>
+                                <td class="px-4 py-3 text-gray-500">TBA</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-gray-400 font-medium">Episode 4+</td>
+                                <td class="px-4 py-3 text-gray-500">Monthly</td>
+                                <td class="px-4 py-3 text-gray-500">Continuous updates planned</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Related Guides -->
+        <div class="grid sm:grid-cols-3 gap-4 mt-10">
+            <a href="/guides/beginners/"
+                class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
+                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-xl">📖</div>
+                <div>
+                    <h3 class="font-semibold">Beginner's Guide</h3>
+                    <p class="text-gray-400 text-sm">New player basics</p>
+                </div>
+            </a>
+            <a href="/wardens/tier-list/"
+                class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-xl">⚔️</div>
+                <div>
+                    <h3 class="font-semibold">Warden Tier List</h3>
+                    <p class="text-gray-400 text-sm">Best characters ranked</p>
+                </div>
+            </a>
+            <a href="/weapons/tier-list/"
+                class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
+                <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-xl">🔫</div>
+                <div>
+                    <h3 class="font-semibold">Weapons Guide</h3>
+                    <p class="text-gray-400 text-sm">Stats & tier list</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Version -->
+        <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mt-10">
+            <h3 class="font-semibold text-gray-300 mb-3">📋 Sources</h3>
+            <ul class="text-sm text-gray-500 space-y-1">
+                <li><strong>Last Updated:</strong> February 2, 2026</li>
+                <li><strong>Data Sources:</strong> Eurogamer, Destructoid, PCGamesN, GameRant, ExitLag, DSO Gaming,
+                    GamesRadar, Escapist Magazine, Official Wildlight announcements</li>
+                <li><strong>Note:</strong> Dates for future episodes are estimates based on official roadmap.
+                    Actual release dates may vary.</li>
+            </ul>
+            <p class="text-xs text-gray-600 mt-3">Highguard.wiki is a fan-made resource. All game content © 2026
+                Wildlight Entertainment Inc.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-arcane-900/50 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-10 text-center text-sm text-gray-500">
+            <p class="mb-2">© 2026 Highguard.wiki — A fan-made resource</p>
+            <p>Highguard™ is a trademark of Wildlight Entertainment Inc.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
