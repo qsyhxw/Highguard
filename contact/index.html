@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Highguard Wiki</title>
+    <meta name="description"
+        content="Contact the Highguard Wiki team. Submit corrections, suggest new content, report issues, or partner with us on Highguard game guides and resources.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://highguard.wiki/contact/">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L4 7v10l8 5 8-5V7l-8-5z'/></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us — Highguard Wiki">
+    <meta property="og:description" content="Get in touch with the Highguard Wiki team.">
+    <meta property="og:url" content="https://highguard.wiki/contact/">
+    <meta property="og:site_name" content="Highguard Wiki">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcane: { 50: '#f0f4ff', 100: '#e0e7ff', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#1e1b4b' },
+                        dark: { 800: '#1e1e2e', 900: '#0f0f1a', 950: '#080810' }
+                    },
+                    fontFamily: {
+                        display: ['Rajdhani', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-950 text-gray-100 antialiased">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-arcane-900/50">
+        <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-xl font-bold text-white" aria-label="Highguard Wiki Home">
+                <svg class="w-8 h-8 text-arcane-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5L18 8v8l-6 3.75L6 16V8l6-3.5z" />
+                    <path d="M12 6v12M8 8l4 2.5L16 8" />
+                </svg>
+                <span class="font-display">Highguard<span class="text-arcane-400">.wiki</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-5 text-sm">
+                <a href="/guides/" class="hover:text-arcane-400 transition">Guides</a>
+                <a href="/wardens/" class="hover:text-arcane-400 transition">Wardens</a>
+                <a href="/weapons/" class="hover:text-arcane-400 transition">Weapons</a>
+                <a href="/maps/" class="hover:text-arcane-400 transition">Maps</a>
+                <a href="/patch-notes/" class="hover:text-arcane-400 transition">Patch Notes</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2">
+                <li><a href="/" class="hover:text-arcane-400">Home</a></li>
+                <li>/</li>
+                <li class="text-gray-300">Contact</li>
+            </ol>
+        </nav>
+
+        <!-- Page Header -->
+        <header class="mb-8 text-center">
+            <h1 class="font-display text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
+            <p class="text-gray-400 max-w-xl mx-auto">
+                Have questions, suggestions, or found an error? We'd love to hear from you.
+                Choose the best way to reach us below.
+            </p>
+        </header>
+
+        <!-- Contact Options -->
+        <div class="grid md:grid-cols-2 gap-4 mb-10">
+            <div class="contact-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                <div class="w-14 h-14 bg-arcane-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">📧
+                </div>
+                <h2 class="font-display text-xl font-bold mb-2">General Inquiries</h2>
+                <p class="text-gray-400 text-sm mb-4">For general questions, feedback, or partnership opportunities.</p>
+                <a href="mailto:contact@highguard.wiki"
+                    class="inline-flex items-center gap-2 text-arcane-400 hover:text-arcane-300 font-medium">
+                    contact@highguard.wiki
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="contact-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                <div class="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🐛</div>
+                <h2 class="font-display text-xl font-bold mb-2">Report an Error</h2>
+                <p class="text-gray-400 text-sm mb-4">Found incorrect information or outdated data? Let us know.</p>
+                <a href="mailto:corrections@highguard.wiki"
+                    class="inline-flex items-center gap-2 text-arcane-400 hover:text-arcane-300 font-medium">
+                    corrections@highguard.wiki
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="contact-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">💡
+                </div>
+                <h2 class="font-display text-xl font-bold mb-2">Suggest Content</h2>
+                <p class="text-gray-400 text-sm mb-4">Have ideas for new guides, tools, or features?</p>
+                <a href="mailto:suggestions@highguard.wiki"
+                    class="inline-flex items-center gap-2 text-arcane-400 hover:text-arcane-300 font-medium">
+                    suggestions@highguard.wiki
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="contact-card bg-dark-800 border border-arcane-900/30 rounded-xl p-6">
+                <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🤝
+                </div>
+                <h2 class="font-display text-xl font-bold mb-2">Business & Partnerships</h2>
+                <p class="text-gray-400 text-sm mb-4">Interested in collaborating with us?</p>
+                <a href="mailto:partnerships@highguard.wiki"
+                    class="inline-flex items-center gap-2 text-arcane-400 hover:text-arcane-300 font-medium">
+                    partnerships@highguard.wiki
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-6 mb-10">
+            <h2 class="font-display text-xl font-bold mb-4 text-center">Follow Us</h2>
+            <div class="flex justify-center gap-4">
+                <a href="https://twitter.com/highguardwiki" target="_blank" rel="noopener"
+                    class="w-12 h-12 bg-dark-900 hover:bg-arcane-600 rounded-xl flex items-center justify-center transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+                <a href="https://discord.gg/highguardwiki" target="_blank" rel="noopener"
+                    class="w-12 h-12 bg-dark-900 hover:bg-[#5865F2] rounded-xl flex items-center justify-center transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                    </svg>
+                </a>
+                <a href="https://youtube.com/@highguardwiki" target="_blank" rel="noopener"
+                    class="w-12 h-12 bg-dark-900 hover:bg-red-600 rounded-xl flex items-center justify-center transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Response Time -->
+        <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-xl p-5 text-center">
+            <h3 class="font-semibold text-arcane-400 mb-2">⏱️ Response Time</h3>
+            <p class="text-gray-300 text-sm">
+                We typically respond to emails within <strong>24-48 hours</strong>.
+                For urgent matters, reach out via Discord for faster responses.
+            </p>
+        </div>
+
+        <!-- Related Links -->
+        <div class="grid sm:grid-cols-2 gap-4 mt-10">
+            <a href="/about/"
+                class="flex items-center gap-4 bg-dark-800 hover:bg-dark-900 rounded-xl p-4 border border-arcane-900/30 transition">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-xl">ℹ️</div>
+                <div>
+                    <h3 class="font-semibold">About Us</h3>
+                    <p class="text-gray-400 text-sm">Learn about our team</p>
+                </div>
+            </a>
+            <a href="/privacy/"
+                class="flex items-center gap-4 bg-dark-800 hover:bg-dark-900 rounded-xl p-4 border border-arcane-900/30 transition">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl">🔒</div>
+                <div>
+                    <h3 class="font-semibold">Privacy Policy</h3>
+                    <p class="text-gray-400 text-sm">How we handle your data</p>
+                </div>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-arcane-900/50 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© 2026 Highguard.wiki — A fan-made resource</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="/privacy/" class="hover:text-arcane-400 transition">Privacy Policy</a>
+                    <a href="/contact/" class="text-arcane-400">Contact</a>
+                    <a href="/about/" class="hover:text-arcane-400 transition">About</a>
+                </div>
+            </div>
+            <p class="text-center text-xs text-gray-600 mt-4">Highguard™ is a trademark of Wildlight Entertainment Inc.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
