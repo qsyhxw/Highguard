@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-90KLFZBVMH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-90KLFZBVMH');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8830315294299920"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highguard PvP Tips: Combat, Movement & Winning Strategies (2026)</title>
+    <meta name="description"
+        content="Master Highguard PvP with our expert tips guide. Learn movement tech, weapon meta, Soul Orb mechanics, optimal settings, and pro combat strategies for Episode 1.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://highguard.wiki/guides/pvp-tips/">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L4 7v10l8 5 8-5V7l-8-5z'/></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Highguard PvP Tips: Combat & Winning Strategies">
+    <meta property="og:description"
+        content="Expert PvP tips covering movement, weapon meta, Soul Orbs, and combat strategies.">
+    <meta property="og:url" content="https://highguard.wiki/guides/pvp-tips/">
+    <meta property="og:site_name" content="Highguard Wiki">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highguard PvP Tips Guide 2026">
+    <meta name="twitter:description" content="Pro combat tips and movement techniques for Highguard.">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcane: { 50: '#f0f4ff', 100: '#e0e7ff', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#1e1b4b' },
+                        dark: { 800: '#1e1e2e', 900: '#0f0f1a', 950: '#080810' }
+                    },
+                    fontFamily: {
+                        display: ['Rajdhani', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .glow-sm {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .prose h2 {
+            scroll-margin-top: 80px;
+        }
+
+        .tip-card {
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: scale(1.02);
+            border-color: rgba(99, 102, 241, 0.5);
+        }
+    </style>
+
+    <!-- JSON-LD: Article + FAQPage -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Highguard PvP Tips: Combat, Movement & Winning Strategies","description":"Expert guide to PvP combat in Highguard covering movement techniques, weapon meta, and combat strategies.","author":{"@type":"Organization","name":"Highguard Wiki"},"publisher":{"@type":"Organization","name":"Highguard Wiki"},"datePublished":"2026-02-02","dateModified":"2026-02-02"}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Soul Orbs in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Soul Orbs drop when players die. Destroying enemy Soul Orbs delays their respawn, while collecting friendly Soul Orbs allows you to revive downed teammates."}},{"@type":"Question","name":"What is the hop slide in Highguard?","acceptedAnswer":{"@type":"Answer","text":"The hop slide is a movement technique that provides momentum. It can be performed on foot, while mounted, and when dismounting from ziplines. Originally a bug, it was kept due to its gameplay value."}},{"@type":"Question","name":"What FOV should I use in Highguard?","acceptedAnswer":{"@type":"Answer","text":"Most competitive players recommend maxing FOV to 110 for better peripheral vision. Also consider disabling motion blur for clearer visuals during fast movement."}},{"@type":"Question","name":"What is the best weapon in Highguard?","acceptedAnswer":{"@type":"Answer","text":"The Saber Rifle is currently considered top-tier due to its high damage potential (especially headshots) and effectiveness at both close and long range."}}]}
+    </script>
+</head>
+
+<body class="bg-dark-950 text-gray-100 antialiased">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-arcane-900/50">
+        <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-xl font-bold text-white" aria-label="Highguard Wiki Home">
+                <svg class="w-8 h-8 text-arcane-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5L18 8v8l-6 3.75L6 16V8l6-3.5z" />
+                    <path d="M12 6v12M8 8l4 2.5L16 8" />
+                </svg>
+                <span class="font-display">Highguard<span class="text-arcane-400">.wiki</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-5 text-sm">
+                <a href="/guides/" class="text-arcane-400">Guides</a>
+                <a href="/wardens/" class="hover:text-arcane-400 transition">Wardens</a>
+                <a href="/weapons/" class="hover:text-arcane-400 transition">Weapons</a>
+                <a href="/maps/" class="hover:text-arcane-400 transition">Maps</a>
+                <a href="/patch-notes/" class="hover:text-arcane-400 transition">Patch Notes</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+            <ol class="flex items-center gap-2">
+                <li><a href="/" class="hover:text-arcane-400">Home</a></li>
+                <li>/</li>
+                <li><a href="/guides/" class="hover:text-arcane-400">Guides</a></li>
+                <li>/</li>
+                <li class="text-gray-300">PvP Tips</li>
+            </ol>
+        </nav>
+
+        <!-- Article Header -->
+        <header class="mb-10">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                <span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs font-medium">ADVANCED</span>
+                <span>•</span>
+                <span>7 min read</span>
+                <span>•</span>
+                <span>Updated Feb 2, 2026</span>
+            </div>
+            <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                Highguard PvP Tips: Combat, Movement & Winning Strategies
+            </h1>
+            <p class="text-lg text-gray-300 mb-6">
+                Elevate your Highguard gameplay with these expert PvP tips. Master <strong>movement techniques</strong>,
+                understand the <strong>weapon meta</strong>, optimize your <strong>settings</strong>, and learn pro
+                strategies to dominate every match.
+            </p>
+
+            <!-- Data Source Notice -->
+            <div class="bg-arcane-900/30 border border-arcane-500/50 rounded-xl p-4 mb-6">
+                <div class="flex items-start gap-3">
+                    <span class="text-2xl">📊</span>
+                    <div>
+                        <h2 class="font-semibold text-arcane-400 mb-1">Data Source</h2>
+                        <p class="text-sm text-gray-300">Tips compiled from <strong>community guides</strong>,
+                            <strong>pro player strategies</strong>, and developer interviews.
+                            Last verified: February 2, 2026.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Table of Contents -->
+        <nav class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mb-10">
+            <h2 class="text-lg font-semibold mb-4 font-display">📑 Table of Contents</h2>
+            <ol class="space-y-2 text-sm">
+                <li><a href="#mindset" class="text-arcane-400 hover:text-arcane-300">1. Winning Mindset</a></li>
+                <li><a href="#movement" class="text-arcane-400 hover:text-arcane-300">2. Movement Techniques</a></li>
+                <li><a href="#gunplay" class="text-arcane-400 hover:text-arcane-300">3. Gunplay & Aim</a></li>
+                <li><a href="#weapons" class="text-arcane-400 hover:text-arcane-300">4. Weapon Meta</a></li>
+                <li><a href="#soul-orbs" class="text-arcane-400 hover:text-arcane-300">5. Soul Orb Mechanics</a></li>
+                <li><a href="#settings" class="text-arcane-400 hover:text-arcane-300">6. Optimal Settings</a></li>
+                <li><a href="#team-play" class="text-arcane-400 hover:text-arcane-300">7. Team Play</a></li>
+                <li><a href="#faq" class="text-arcane-400 hover:text-arcane-300">8. FAQ</a></li>
+            </ol>
+        </nav>
+
+        <!-- Article Content -->
+        <article class="prose prose-invert max-w-none">
+
+            <!-- Section 1: Mindset -->
+            <section id="mindset" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">1</span>
+                    Winning Mindset
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Highguard is <strong>not a deathmatch</strong>. The key difference between average and great
+                    players is understanding that <strong>objectives win games, not kills</strong>.
+                </p>
+
+                <div class="bg-red-900/20 border border-red-500/30 rounded-xl p-5 mb-6">
+                    <h3 class="font-semibold text-red-400 mb-3 font-display">🎯 Core Principle</h3>
+                    <p class="text-gray-300 text-lg font-medium text-center">
+                        "Kills are a means to an end. The objective is destroying their base."
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div class="bg-green-900/20 border border-green-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-green-400 mb-3 font-display">✅ Do</h3>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><span class="text-green-400">▸</span> Contest Shieldbreaker spawns</li>
+                            <li><span class="text-green-400">▸</span> Prioritize generator destruction</li>
+                            <li><span class="text-green-400">▸</span> Disengage from losing fights</li>
+                            <li><span class="text-green-400">▸</span> Farm Vesper during downtime</li>
+                            <li><span class="text-green-400">▸</span> Communicate everything</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-900/20 border border-red-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-red-400 mb-3 font-display">❌ Don't</h3>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><span class="text-red-400">▸</span> Chase kills across the map</li>
+                            <li><span class="text-red-400">▸</span> Ignore Shieldbreaker timing</li>
+                            <li><span class="text-red-400">▸</span> Solo push into 1v3 fights</li>
+                            <li><span class="text-red-400">▸</span> Forget to upgrade gear</li>
+                            <li><span class="text-red-400">▸</span> Play without comms</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Movement -->
+            <section id="movement" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">2</span>
+                    Movement Techniques
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Highguard's movement is described as <strong>"snappy, sticky, and a whole lot of fun"</strong>
+                    by players. Mastering movement gives you a significant combat advantage.
+                </p>
+
+                <div class="space-y-4 mb-6">
+                    <div class="tip-card bg-dark-800 border border-purple-500/30 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🛹</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-purple-400 font-display">Hop Slide</h3>
+                                <p class="text-gray-400 text-sm">Essential movement tech</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-3">
+                            The <strong>hop slide</strong> is a momentum technique that lets you move faster
+                            and become harder to hit. Originally a bug, it was kept because it adds depth to gameplay.
+                        </p>
+                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm">
+                            <span class="text-gray-500">Works:</span> On foot, while mounted, and when dismounting from
+                            ziplines
+                        </div>
+                    </div>
+
+                    <div class="tip-card bg-dark-800 border border-blue-500/30 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🪝</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-blue-400 font-display">Zipline Mastery</h3>
+                                <p class="text-gray-400 text-sm">Quick map traversal</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-3">
+                            Ziplines provide rapid vertical and horizontal movement. Use them for flanking,
+                            retreating, and reaching elevated positions. Combine with hop slide on dismount
+                            for momentum.
+                        </p>
+                    </div>
+
+                    <div class="tip-card bg-dark-800 border border-orange-500/30 rounded-xl p-5">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center text-2xl">
+                                🐴</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-orange-400 font-display">Mounted Combat</h3>
+                                <p class="text-gray-400 text-sm">Mobile gunfighting</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-3">
+                            Mounts aren't just for travel—you can <strong>shoot while riding</strong>. Use mounts
+                            for drive-by attacks, quick rotations, and escape. But remember: mounts are destructible
+                            and loud. Know when to dismount.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-4 text-sm">
+                    <strong class="text-arcane-400">💡 Pro Tip:</strong> Movement is your best defense. A moving
+                    target is harder to hit than one behind cover. Combine strafing, sliding, and jumping to
+                    become unpredictable.
+                </div>
+            </section>
+
+            <!-- Section 3: Gunplay -->
+            <section id="gunplay" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">3</span>
+                    Gunplay & Aim
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Highguard's gunplay is compared to <strong>Apex Legends</strong>—snappy, precise, and rewarding.
+                    Here's how to improve your aim:
+                </p>
+
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-5 mb-6">
+                    <h3 class="font-semibold text-white mb-3 font-display">Aim Fundamentals</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center text-red-400 shrink-0">🎯</span>
+                            <div>
+                                <strong class="text-white">Prioritize Headshots</strong>
+                                <p class="text-gray-400">Especially with precision weapons like the Saber Rifle.
+                                    Headshot multipliers are significant.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400 shrink-0">📍</span>
+                            <div>
+                                <strong class="text-white">Crosshair Placement</strong>
+                                <p class="text-gray-400">Keep crosshair at head level where enemies are likely
+                                    to appear. Less adjustment needed when engaging.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span
+                                class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center text-green-400 shrink-0">🔄</span>
+                            <div>
+                                <strong class="text-white">Strafe While Shooting</strong>
+                                <p class="text-gray-400">Never stand still during firefights. Move side-to-side
+                                    while maintaining aim on your target.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4 text-sm mb-4">
+                    <strong class="text-yellow-400">🎮 Controller Players:</strong> Consider using lower sensitivity
+                    with an "Exponential" response curve for better precision. Disable "Extra Turn Rate (ADS)"
+                    for more consistent aim.
+                </div>
+            </section>
+
+            <!-- Section 4: Weapons -->
+            <section id="weapons" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">4</span>
+                    Weapon Meta
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Understanding the current weapon meta gives you an edge. Here are the top picks:
+                </p>
+
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-lg overflow-hidden mb-6">
+                    <table class="w-full text-sm">
+                        <thead class="bg-dark-900">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-arcane-400 font-medium">Weapon</th>
+                                <th class="px-4 py-3 text-left text-gray-400 font-medium">Tier</th>
+                                <th class="px-4 py-3 text-left text-gray-400 font-medium">Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-arcane-900/30">
+                            <tr>
+                                <td class="px-4 py-3 text-white font-medium">Saber Rifle</td>
+                                <td class="px-4 py-3"><span class="text-yellow-400">⭐ S-Tier</span></td>
+                                <td class="px-4 py-3 text-gray-300">All-around, headshots, versatile range</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-white font-medium">Rocket Launcher</td>
+                                <td class="px-4 py-3"><span class="text-green-400">A-Tier</span></td>
+                                <td class="px-4 py-3 text-gray-300">Raiding, wall destruction, area damage</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-white font-medium">Blast Hammer</td>
+                                <td class="px-4 py-3"><span class="text-green-400">A-Tier</span></td>
+                                <td class="px-4 py-3 text-gray-300">Close-range breach, high structure damage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-gray-400 text-sm">
+                    For full weapon stats and rankings, see our
+                    <a href="/weapons/tier-list/" class="text-arcane-400 hover:underline">Weapons Tier List</a>.
+                </p>
+            </section>
+
+            <!-- Section 5: Soul Orbs -->
+            <section id="soul-orbs" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">5</span>
+                    Soul Orb Mechanics
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Soul Orbs are a critical but often overlooked mechanic that can swing fights in your favor.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-purple-900/20 border border-purple-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-purple-400 mb-3 font-display">💀 Enemy Soul Orbs</h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            When enemies die, they drop Soul Orbs. <strong>Destroy them</strong> to delay
+                            their respawn timer significantly.
+                        </p>
+                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm text-gray-300">
+                            <strong>Tip:</strong> Always finish Soul Orbs after kills during raids
+                        </div>
+                    </div>
+                    <div class="bg-green-900/20 border border-green-500/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-green-400 mb-3 font-display">💚 Friendly Soul Orbs</h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            When teammates die, <strong>collect their Soul Orbs</strong> to enable their
+                            revival. Protect friendly orbs during fights.
+                        </p>
+                        <div class="bg-dark-900/50 rounded-lg p-3 text-sm text-gray-300">
+                            <strong>Tip:</strong> Reviving maintains team pressure during raids
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Settings -->
+            <section id="settings" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">6</span>
+                    Optimal Settings
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Competitive settings can give you an edge. Here are recommended optimizations:
+                </p>
+
+                <div class="bg-dark-800 border border-arcane-900/30 rounded-lg p-5 mb-6">
+                    <h3 class="font-semibold text-white mb-3 font-display">🎮 Recommended Settings</h3>
+                    <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                        <div class="bg-dark-900/50 rounded-lg p-3">
+                            <span class="text-arcane-400 font-medium">FOV:</span>
+                            <span class="text-gray-300 ml-2">110 (max)</span>
+                        </div>
+                        <div class="bg-dark-900/50 rounded-lg p-3">
+                            <span class="text-arcane-400 font-medium">Motion Blur:</span>
+                            <span class="text-gray-300 ml-2">Off</span>
+                        </div>
+                        <div class="bg-dark-900/50 rounded-lg p-3">
+                            <span class="text-arcane-400 font-medium">Response Curve (Controller):</span>
+                            <span class="text-gray-300 ml-2">Exponential</span>
+                        </div>
+                        <div class="bg-dark-900/50 rounded-lg p-3">
+                            <span class="text-arcane-400 font-medium">Extra Turn Rate (ADS):</span>
+                            <span class="text-gray-300 ml-2">Off</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-arcane-900/20 border border-arcane-500/30 rounded-lg p-4 text-sm">
+                    <strong class="text-arcane-400">💡 Why FOV 110?</strong> Higher FOV provides better
+                    peripheral vision, letting you spot flanking enemies earlier. The trade-off is targets
+                    appear slightly smaller at distance.
+                </div>
+            </section>
+
+            <!-- Section 7: Team Play -->
+            <section id="team-play" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">7</span>
+                    Team Play
+                </h2>
+                <p class="text-gray-300 mb-4">
+                    Highguard is a <strong>team game</strong>. Solo plays rarely win matches. Here's how to
+                    maximize team effectiveness:
+                </p>
+
+                <div class="space-y-4 mb-6">
+                    <div class="bg-dark-800 border-l-4 border-blue-500 rounded-r-lg p-4">
+                        <h3 class="font-semibold text-white mb-1 font-display">🎤 Communication</h3>
+                        <p class="text-gray-400 text-sm">Voice chat > ping system. Call out enemy positions,
+                            Shieldbreaker timing, and coordinate abilities. If no voice, use pings constantly.</p>
+                    </div>
+                    <div class="bg-dark-800 border-l-4 border-green-500 rounded-r-lg p-4">
+                        <h3 class="font-semibold text-white mb-1 font-display">⚔️ Team Composition</h3>
+                        <p class="text-gray-400 text-sm">Balance your Warden picks. Include at least one
+                            damage dealer, one support/defensive Warden, and consider map-specific picks.</p>
+                    </div>
+                    <div class="bg-dark-800 border-l-4 border-purple-500 rounded-r-lg p-4">
+                        <h3 class="font-semibold text-white mb-1 font-display">🎯 Focus Fire</h3>
+                        <p class="text-gray-400 text-sm">Call targets and focus one enemy at a time. Three
+                            players shooting one target wins faster than splitting damage across three enemies.</p>
+                    </div>
+                    <div class="bg-dark-800 border-l-4 border-yellow-500 rounded-r-lg p-4">
+                        <h3 class="font-semibold text-white mb-1 font-display">🔄 Trade Kills</h3>
+                        <p class="text-gray-400 text-sm">If a teammate takes a fight, be ready to trade.
+                            Staying close enough to revenge kill means their death isn't wasted.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: FAQ -->
+            <section id="faq" class="mb-12">
+                <h2 class="font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-arcane-600 rounded-lg flex items-center justify-center text-sm">8</span>
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="space-y-3">
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            What are Soul Orbs in Highguard?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Soul Orbs drop when players die. Destroying
+                            enemy Soul Orbs delays their respawn, while collecting friendly Soul Orbs allows
+                            you to revive downed teammates.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            What is the hop slide in Highguard?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">The hop slide is a movement technique that
+                            provides momentum. It can be performed on foot, while mounted, and when dismounting
+                            from ziplines. Originally a bug, it was kept due to its gameplay value.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            What FOV should I use in Highguard?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Most competitive players recommend maxing FOV
+                            to 110 for better peripheral vision. Also consider disabling motion blur for
+                            clearer visuals during fast movement.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            What is the best weapon in Highguard?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">The Saber Rifle is currently considered top-tier
+                            due to its high damage potential (especially headshots) and effectiveness at both
+                            close and long range.</div>
+                    </details>
+                    <details class="group bg-dark-800 rounded-lg border border-arcane-900/30">
+                        <summary class="flex justify-between items-center cursor-pointer p-4 font-medium">
+                            Is there health regeneration in Highguard?
+                            <svg class="w-5 h-5 text-arcane-400 group-open:rotate-180 transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-4 pb-4 text-gray-400">Yes, there's passive health regeneration when
+                            you're out of combat. This makes disengaging from losing fights a valid strategy—
+                            heal up and re-engage on your terms.</div>
+                    </details>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Related Guides -->
+        <div class="grid sm:grid-cols-3 gap-4 mt-10">
+            <a href="/guides/raiding/"
+                class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
+                <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center text-xl">⚔️</div>
+                <div>
+                    <h3 class="font-semibold">Raiding Guide</h3>
+                    <p class="text-gray-400 text-sm">Attack strategies</p>
+                </div>
+            </a>
+            <a href="/guides/strongholds/"
+                class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl">🏰</div>
+                <div>
+                    <h3 class="font-semibold">Stronghold Guide</h3>
+                    <p class="text-gray-400 text-sm">Base defense</p>
+                </div>
+            </a>
+            <a href="/weapons/tier-list/"
+                class="card-hover flex items-center gap-4 bg-dark-800 rounded-xl p-4 border border-arcane-900/30">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-xl">🔫</div>
+                <div>
+                    <h3 class="font-semibold">Weapons Tier List</h3>
+                    <p class="text-gray-400 text-sm">All guns ranked</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Version -->
+        <section class="bg-dark-800 border border-arcane-900/30 rounded-xl p-5 mt-10">
+            <h3 class="font-semibold text-gray-300 mb-3">📋 Version & Sources</h3>
+            <ul class="text-sm text-gray-500 space-y-1">
+                <li><strong>Game Version:</strong> Episode 1 (Launch Build, Jan 26, 2026)</li>
+                <li><strong>Last Updated:</strong> February 2, 2026</li>
+                <li><strong>Data Sources:</strong> KeenGamer, TheGamer, GameRant, gam3s.gg, sportskeeda.com,
+                    GameInformer, community guides, developer interviews</li>
+                <li><strong>Note:</strong> Meta and mechanics may change with future patches. We'll update
+                    this guide accordingly.</li>
+            </ul>
+            <p class="text-xs text-gray-600 mt-3">Highguard.wiki is a fan-made resource. All game content © 2026
+                Wildlight Entertainment Inc.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-arcane-900/50 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">© 2026 Highguard.wiki — A fan-made resource</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="/privacy/" class="hover:text-arcane-400 transition">Privacy Policy</a>
+                    <a href="/contact/" class="hover:text-arcane-400 transition">Contact</a>
+                    <a href="/about/" class="hover:text-arcane-400 transition">About</a>
+                </div>
+            </div>
+            <p class="text-center text-xs text-gray-600 mt-4">Highguard™ is a trademark of Wildlight Entertainment Inc.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
