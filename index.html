@@ -111,7 +111,7 @@
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"Highguard Wiki","url":"https://highguard.wiki/","potentialAction":{"@type":"SearchAction","target":"https://highguard.wiki/search?q={search_term_string}","query-input":"required name=search_term_string"}}
+    {"@context":"https://schema.org","@type":"WebSite","name":"Highguard Wiki","url":"https://highguard.wiki/"}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"Highguard Wiki","url":"https://highguard.wiki/","description":"Fan-made wiki and guide hub for Highguard, the PvP raid shooter by Wildlight Entertainment.","logo":"https://highguard.wiki/logo.svg"}
@@ -134,19 +134,7 @@
                 </svg>
                 <span>Highguard<span class="text-arcane-400">.wiki</span></span>
             </a>
-            <!-- Search -->
-            <div class="hidden lg:flex flex-1 max-w-md mx-4">
-                <div class="relative w-full">
-                    <input type="search" placeholder="Search guides, wardens, weapons..."
-                        class="w-full bg-dark-800 border border-arcane-900/50 rounded-lg px-4 py-2 pl-10 text-sm focus:outline-none focus:border-arcane-500 focus:ring-1 focus:ring-arcane-500"
-                        aria-label="Search">
-                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </div>
-            </div>
+
             <div class="hidden md:flex items-center gap-5 text-sm">
                 <a href="/guides/" class="hover:text-arcane-400 transition">Guides</a>
                 <a href="/wardens/" class="hover:text-arcane-400 transition">Wardens</a>
@@ -171,9 +159,7 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-t border-arcane-900/50 px-4 py-4">
-            <input type="search" placeholder="Search..."
-                class="w-full bg-dark-800 border border-arcane-900/50 rounded-lg px-4 py-2 mb-4 text-sm"
-                aria-label="Search">
+
             <a href="/guides/" class="block py-2 hover:text-arcane-400">Guides</a>
             <a href="/wardens/" class="block py-2 hover:text-arcane-400">Wardens</a>
             <a href="/weapons/" class="block py-2 hover:text-arcane-400">Weapons</a>
